@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d20d457608702da4bbeaa0c5aa779cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireSpeed: 20000
+  fireSpeed: 60000
   explosionStrength: 5000
   explosionRadius: 5
 --- !u!136 &136894577708118100

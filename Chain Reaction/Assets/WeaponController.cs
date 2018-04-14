@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class WeaponController : MonoBehaviour {
+    public static WeaponController instance;
 
     public float rotationSpeed = 100;
     public Vector3 lookTarget = Vector3.zero;
@@ -17,16 +19,17 @@ public class WeaponController : MonoBehaviour {
     private GameObject currentWeapon;
     private Weapon currentWeaponType;
 
+    public bool cameraLocked;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     void Update()
     {
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
-        {
-            transform.RotateAround(lookTarget, -Vector3.up, Time.deltaTime * rotationSpeed);
-        }
-        else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
-        {
-            transform.RotateAround(lookTarget, Vector3.up, Time.deltaTime * rotationSpeed);
-        }
+        if(!cameraLocked)
+            HorizontalMovementUpdate();
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -50,6 +53,18 @@ public class WeaponController : MonoBehaviour {
         }
     }
 
+    private void HorizontalMovementUpdate()
+    {
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+        {
+            transform.RotateAround(lookTarget, -Vector3.up, Time.deltaTime * rotationSpeed);
+        }
+        else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        {
+            transform.RotateAround(lookTarget, Vector3.up, Time.deltaTime * rotationSpeed);
+        }
+    }
+
     void ChangeCurrentWeapon(Weapon weaponType)
     {
         if (currentWeapon != null)
@@ -67,10 +82,12 @@ public class WeaponController : MonoBehaviour {
                 break;
             case Weapon.BowlingBall:
                 currentWeapon = Instantiate(bowlingBallPrefab, Vector3.MoveTowards(transform.position, lookTarget, spawnDistance * 2), transform.rotation);
+                cameraLocked = true;
                 break;
             case Weapon.Car:
                 currentWeapon = Instantiate(carPrefab, Vector3.MoveTowards(transform.position, lookTarget, spawnDistance), Quaternion.Euler(new Vector3(transform.rotation.x + 180, transform.rotation.y + 90, transform.rotation.z)));
                 currentWeapon.transform.LookAt(lookTarget);
+                cameraLocked = true;
                 break;
             case Weapon.C4:
                 currentWeapon = Instantiate(c4Prefab, Vector3.MoveTowards(transform.position, lookTarget - new Vector3(0, 20, 0), spawnDistance), transform.rotation);

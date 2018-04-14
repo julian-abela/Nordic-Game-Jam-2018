@@ -47,6 +47,7 @@ public class AnvilScript : MonoBehaviour {
             body.useGravity = true;
             body.AddForce(Vector3.down * fireSpeed, ForceMode.Force);
             hasBeenUsed = true;
+            WeaponController.instance.cameraLocked = false;
         }
         else
         {
