@@ -2,15 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Weapon
+{
+    BaseBall,
+    Car,
+    BowlingBall,
+    Missile
+}
+
 public class Projectile : MonoBehaviour
 {
     public Transform target;
-    public float speed;
-    public bool tennisBall;
+    public float controlSpeed;
+    public float fireSpeed;
+    public Weapon weaponType;
+
+    private bool carMoving;
 
     private void Start()
     {
-        if (tennisBall)
+        if (weaponType == Weapon.BaseBall || weaponType == Weapon.Car)
         {
             GetComponent<Rigidbody>().useGravity = true;
         }
@@ -18,41 +29,54 @@ public class Projectile : MonoBehaviour
 
     void Update()
     {
-        float step = speed * Time.deltaTime;
+        float step = controlSpeed * Time.deltaTime;
 
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
-            transform.position = transform.position - transform.right * step;
+            transform.position -= transform.right * step;
         } else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
-            transform.position = transform.position + transform.right * step;
+            transform.position += transform.right * step;
         }
 
         if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
-            transform.position = transform.position - transform.up * step;
+            transform.position -= transform.up * step;
         }
         else if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
-            transform.position = transform.position + transform.up * step;
+            transform.position += transform.up * step;
         }
 
         if (Input.GetKey(KeyCode.Space))
         {
-            if (tennisBall)
+            switch(weaponType)
             {
-                GetComponent<Rigidbody>().AddForce((transform.forward * speed + transform.up * speed/8), ForceMode.Impulse);
-
-            } else
-            {
-                GetComponent<Rigidbody>().AddForce(transform.forward * speed * 50, ForceMode.Force);
+                case Weapon.BaseBall:
+                    GetComponent<Rigidbody>().AddForce((transform.forward * fireSpeed + transform.up * fireSpeed / 8), ForceMode.Impulse);
+                    break;
+                case Weapon.Missile:
+                    GetComponent<Rigidbody>().AddForce(transform.forward * fireSpeed, ForceMode.Force);
+                    break;
+                case Weapon.BowlingBall:
+                    GetComponent<Rigidbody>().useGravity = true;
+                    GetComponent<Rigidbody>().AddForce(Vector3.down * fireSpeed, ForceMode.Force);
+                    break;
+                case Weapon.Car:
+                    carMoving = true;
+                    break;
             }
+        }
+
+        if (carMoving)
+        {
+            transform.position += transform.forward * fireSpeed * Time.deltaTime; ;
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (!tennisBall)
+        if (weaponType == Weapon.Missile)
         {
             Destroy(this.gameObject, 0.1f);
         }
