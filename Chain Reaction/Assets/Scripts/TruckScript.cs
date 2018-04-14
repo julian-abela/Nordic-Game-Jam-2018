@@ -8,6 +8,7 @@ public class TruckScript : MonoBehaviour {
 
     private Rigidbody rb;
     private bool fired;
+    private bool isOnFloor;
 
 	// Use this for initialization
 	void Start () {
@@ -16,18 +17,24 @@ public class TruckScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && isOnFloor)
         {
             fired = true;
-            Debug.Log("FIRE");
         }
 
         if (fired)
         {
-            rb.AddForce(transform.forward * speed);
+            rb.AddForce(transform.parent.forward * speed);
         }
 	}
 
     public void DriveTruck() {
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Floor")) {
+            isOnFloor = true;
+        }
     }
 }

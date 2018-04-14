@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 34222276080753e4c8d94cd731c111ea
-timeCreated: 1523729322
+guid: 8c4cf91edad9ac14a9e9d5c5c5624cf2
+timeCreated: 1523730592
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -16,7 +16,6 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube
-    4300002: Truck
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -69,7 +68,7 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 1
+    normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1
