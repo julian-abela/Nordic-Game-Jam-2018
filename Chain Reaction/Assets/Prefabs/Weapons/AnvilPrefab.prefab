@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4371046903760492}
   - component: {fileID: 54359324314034436}
   - component: {fileID: 114726741922823132}
+  - component: {fileID: 65239522005358458}
   m_Layer: 0
   m_Name: AnvilPrefab
   m_TagString: Untagged
@@ -54,7 +55,6 @@ GameObject:
   - component: {fileID: 4124099934639278}
   - component: {fileID: 33600643016673126}
   - component: {fileID: 23077694100914936}
-  - component: {fileID: 65333918475596372}
   m_Layer: 0
   m_Name: Anvil
   m_TagString: Untagged
@@ -95,7 +95,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1426432316725420}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 2.050537, y: 5.5, z: -11.542528}
+  m_LocalPosition: {x: -5.872299, y: 7.14, z: -13.581522}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4124099934639278}
@@ -159,12 +159,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!65 &65333918475596372
+--- !u!65 &65239522005358458
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1599848694960404}
+  m_GameObject: {fileID: 1426432316725420}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -218,3 +218,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61c7b6febea89d748958d6cc19d4112f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioStart: event:/Anvil
