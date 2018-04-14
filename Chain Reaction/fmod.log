@@ -11,7 +11,7 @@
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x10e947e08 isAsync 1 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x1415b6808 isAsync 1 updatePeriod 0.02
 [LOG] Thread::initThread                       : Init FMOD Studio update thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
@@ -21,8 +21,81 @@
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
 [LOG] Profile::init                            : Profiler listening on port: 9264
-[ERR] FMOD_OS_File_Open                        : fopen failed to open 'FMOD/NGJ2018/Build/Desktop/.strings.bank', errno = 2
-[ERR] RuntimeBankModel::openFile               : Failed to open file 'FMOD/NGJ2018/Build/Desktop/.strings.bank'
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 114496
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 15392
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000016107bc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x15fedf993
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x15fedfa4f
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x15fedfa7f
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x15fedfb1c
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x13c656758
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='NGJ2018 - Bomb-bip', format=2, channels=2, frequency=48000, lengthbytes=3008, lengthpcm=20572, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.260782.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 114496
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 15392
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000016107bc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x15fedf993
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x15fedfa4f
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x15fedfa7f
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x15fedfb1c
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x13c647fe8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='explosion_large_07', format=2, channels=2, frequency=48000, lengthbytes=33824, lengthpcm=123152, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.956834.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 114496
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 15392
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000016107bc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x15fedf993
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x15fedfa4f
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x15fedfa7f
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x15fedfb1c
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x13c647fe8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='explosion_med_long_tail_01', format=2, channels=2, frequency=48000, lengthbytes=36480, lengthpcm=148849, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.944219.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 114496
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 15392
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000016107bc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x15fedf993
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x15fedfa4f
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x15fedfa7f
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x15fedfb1c
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x13c647fe8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='explosion_large_08', format=2, channels=2, frequency=48000, lengthbytes=40832, lengthpcm=178483, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.977237.
+[LOG] SoundI::release                          :  (0x13c64ab38)
+[LOG] SoundI::release                          :     NGJ2018 - Bomb-bip (0x13c64aca8)
+[LOG] SoundI::release                          :  (0x13a049a68)
+[LOG] SoundI::release                          :     explosion_large_08 (0x13a049bd8)
+[LOG] SoundI::release                          :  (0x13c648aa8)
+[LOG] SoundI::release                          :     explosion_med_long_tail_01 (0x13c648c18)
+[LOG] SoundI::release                          :  (0x13c6485f8)
+[LOG] SoundI::release                          :     explosion_large_07 (0x13c648768)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
