@@ -19,11 +19,11 @@ public class WeaponController : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             transform.RotateAround(lookTarget, -Vector3.up, Time.deltaTime * rotationSpeed);
         }
-        else if (Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             transform.RotateAround(lookTarget, Vector3.up, Time.deltaTime * rotationSpeed);
         }
