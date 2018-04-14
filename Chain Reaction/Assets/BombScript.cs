@@ -9,7 +9,7 @@ public class BombScript : MonoBehaviour {
     private Rigidbody rb;
     private MeshRenderer mr;
     private float timeCount;
-    private int lastTickSecond;
+    private float lastTickSecond;
     private bool exploded;
 
     public GameObject explosion;
@@ -33,7 +33,7 @@ public class BombScript : MonoBehaviour {
 	void Start () {
 
         timeCount = timer;
-        lastTickSecond = Mathf.FloorToInt(timer);
+        lastTickSecond = timeCount;
 
         rb = GetComponent<Rigidbody>();
         mr = GetComponent<MeshRenderer>();
@@ -43,8 +43,12 @@ public class BombScript : MonoBehaviour {
 	void Update () {
         if (timeCount <= 0f && !exploded)
         {
+            eventBombBip.stop(STOP_MODE.IMMEDIATE);
+            ExplosionSound();
             exploded = true;
             var particle = Instantiate(explosion,transform.position,Quaternion.identity);
+            Destroy(particle, 1f);
+            Destroy(gameObject, 2f);
             mr.enabled = false;
 
             Vector3 explosionPos = transform.position;
@@ -56,18 +60,15 @@ public class BombScript : MonoBehaviour {
                 if (rigidBody != null)
                 {
                     rigidBody.AddExplosionForce(explosionForce, explosionPos, maxSize);
-                    //ExplosionSound();
                 }
             }
         }
-        else
+        else if(!exploded)
         {
-            int second = Mathf.FloorToInt(timeCount);
-            if(second < lastTickSecond){
-                lastTickSecond = second;
-                //eventBombBip = RuntimeManager.CreateInstance(audioBombBip);
-                //eventBombBip.start();
-                Debug.Log(timeCount);
+            if(timeCount < lastTickSecond - 1){
+                lastTickSecond = timeCount;
+                eventBombBip = RuntimeManager.CreateInstance(audioBombBip);
+                eventBombBip.start();
             }
             timeCount -= Time.deltaTime;
             

@@ -12,23 +12,15 @@ public enum Weapon
 
 public class Projectile : MonoBehaviour
 {
-    public Transform target;
     public float controlSpeed;
     public float fireSpeed;
     public Weapon weaponType;
 
     private bool carMoving;
 
-    private void Start()
-    {
-        if (weaponType == Weapon.Baseball || weaponType == Weapon.Car)
-        {
-            GetComponent<Rigidbody>().useGravity = true;
-        }
-    }
-
     void Update()
     {
+        /*
         float step = controlSpeed * Time.deltaTime;
 
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
@@ -47,12 +39,14 @@ public class Projectile : MonoBehaviour
         {
             transform.position += transform.up * step;
         }
+        */
 
         if (Input.GetKey(KeyCode.Space))
         {
             switch(weaponType)
             {
                 case Weapon.Baseball:
+                    GetComponent<Rigidbody>().useGravity = true;
                     GetComponent<Rigidbody>().AddForce((transform.forward * fireSpeed + transform.up * fireSpeed / 8), ForceMode.Impulse);
                     break;
                 case Weapon.Missile:
@@ -64,13 +58,15 @@ public class Projectile : MonoBehaviour
                     break;
                 case Weapon.Car:
                     carMoving = true;
+                    GetComponent<Rigidbody>().useGravity = true;
+                    GetComponent<Rigidbody>().AddForce(transform.forward * fireSpeed, ForceMode.Force);
                     break;
             }
         }
 
-        if (carMoving)
+        if (carMoving && GetComponent<Rigidbody>().velocity.magnitude < fireSpeed/2)
         {
-            transform.position += transform.forward * fireSpeed * Time.deltaTime; ;
+            GetComponent<Rigidbody>().AddForce(-transform.right * fireSpeed, ForceMode.Force);
         }
     }
 

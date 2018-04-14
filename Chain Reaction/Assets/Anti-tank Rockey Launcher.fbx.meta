@@ -1,17 +1,25 @@
 fileFormatVersion: 2
-guid: 25ebc5d56a686e146b9e5b4892ddb779
-timeCreated: 1523714629
+guid: 4c85eb13b3779aa4496c5d791cc1f7aa
+timeCreated: 1523722066
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Missile
+    100004: Rocket Launcher
     400000: //RootNode
-    2100000: Material.002
-    2100002: Material.001
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Cylinder
+    400002: Missile
+    400004: Rocket Launcher
+    2100000: Material.003
+    2100002: Material.002
+    2100004: Material.001
+    2300000: Missile
+    2300002: Rocket Launcher
+    3300000: Missile
+    3300002: Rocket Launcher
+    4300000: Missile
+    4300002: Rocket Launcher
   externalObjects: {}
   materials:
     importMaterials: 1

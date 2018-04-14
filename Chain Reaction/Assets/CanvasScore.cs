@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,14 +9,23 @@ public class CanvasScore : MonoBehaviour {
 
     public static CanvasScore instance;
 
-    public Dictionary<PlayerScore.PlayerNr, PlayerScore> scores;
+    public Dictionary<PlayerScore.PlayerNr, PlayerScore> buildings;
     public Text[] playerTextScores;
     public Dictionary<ScoreDestructableComponent.DestructableType, int> typeToPoints;
 
     private void Awake()
     {
         instance = this;
-        scores = new Dictionary<PlayerScore.PlayerNr, PlayerScore>();
+        buildings = new Dictionary<PlayerScore.PlayerNr, PlayerScore>();
+        for (int i = 0; i < playerTextScores.Length; i++)
+        {
+            buildings.Add((PlayerScore.PlayerNr)i, new PlayerScore());
+            SetScore((PlayerScore.PlayerNr)i, 0);
+        }
+
+        typeToPoints = new Dictionary<ScoreDestructableComponent.DestructableType, int>();
+        typeToPoints.Add(ScoreDestructableComponent.DestructableType.Roof, 10);
+        typeToPoints.Add(ScoreDestructableComponent.DestructableType.Wall, 1);
     }
 
     private void Update()
@@ -24,26 +34,21 @@ public class CanvasScore : MonoBehaviour {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    void Start () {
-        typeToPoints = new Dictionary<ScoreDestructableComponent.DestructableType, int>();
-        typeToPoints.Add(ScoreDestructableComponent.DestructableType.Roof, 10);
-        typeToPoints.Add(ScoreDestructableComponent.DestructableType.Wall, 1);
-
-        for (int i = 0; i < playerTextScores.Length; i++)
-        {
-            scores.Add((PlayerScore.PlayerNr)i, new PlayerScore());
-            SetScore((PlayerScore.PlayerNr)i, 0);
-        }
-	}
+    internal void Register(PlayerScore.PlayerNr owner, ScoreDestructableComponent.DestructableType type)
+    {
+        Debug.Log("Registering object " + type);
+        buildings[owner].MaxScore += typeToPoints[type];
+    }
 
     public void AddScore(PlayerScore.PlayerNr playerNr, ScoreDestructableComponent.DestructableType type)
     {
-        SetScore(playerNr, scores[playerNr].score + typeToPoints[type]);
+        SetScore(playerNr, buildings[playerNr].score + typeToPoints[type]);
     }
 
     public void SetScore(PlayerScore.PlayerNr playerNr, int score)
     {
-        scores[playerNr].score = score;
-        playerTextScores[(int)playerNr].text = playerNr + " = " + score.ToString();
+        buildings[playerNr].score = score;
+        string percentage = buildings[playerNr].MaxScore > 0 ? (100 - ((float)score / buildings[playerNr].MaxScore) * 100f).ToString("0.0") : "100";
+        playerTextScores[(int)playerNr].text = playerNr + " = " + percentage + "%";
     }
 }
