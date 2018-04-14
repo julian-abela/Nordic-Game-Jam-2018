@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="Event" id="{f07df38f-b4a0-46b9-ac5e-b8db471e9103}">
         <property name="name">
-            <value>Debris</value>
+            <value>Button</value>
         </property>
         <property name="outputFormat">
             <value>2</value>
@@ -59,11 +59,18 @@
     <object class="EventAutomatableProperties" id="{277340fc-875d-47c1-9677-56a124c82f1a}"/>
     <object class="MarkerTrack" id="{6ff0da5b-0f9a-4b50-b1a0-b16e8c4401b3}"/>
     <object class="GroupTrack" id="{1c40d003-e2c8-4a97-a050-79c0ba1d310b}">
+        <relationship name="modules">
+            <destination>{ff516d61-0a99-4d82-a33b-cbd80b0e3dd7}</destination>
+        </relationship>
         <relationship name="mixerGroup">
             <destination>{f6a23e0a-63ff-429e-970f-3e78f11e26c9}</destination>
         </relationship>
     </object>
-    <object class="Timeline" id="{5a9392ec-e9fa-41c4-aebb-4d468870d2be}"/>
+    <object class="Timeline" id="{5a9392ec-e9fa-41c4-aebb-4d468870d2be}">
+        <relationship name="modules">
+            <destination>{ff516d61-0a99-4d82-a33b-cbd80b0e3dd7}</destination>
+        </relationship>
+    </object>
     <object class="EventMixerMaster" id="{d565f5a8-63a3-4679-884f-f81bb90cdfef}">
         <relationship name="effectChain">
             <destination>{6742b43e-a3fc-4714-b2ac-86c596e98939}</destination>
@@ -81,6 +88,14 @@
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{1facc3f1-dd2d-4eaf-a5b8-0963f4ebcd60}"/>
+    <object class="SingleSound" id="{ff516d61-0a99-4d82-a33b-cbd80b0e3dd7}">
+        <property name="length">
+            <value>0.14933333333333335</value>
+        </property>
+        <relationship name="audioFile">
+            <destination>{30cf8f27-c89f-498d-82ff-fb8f68d90beb}</destination>
+        </relationship>
+    </object>
     <object class="EventMixerGroup" id="{f6a23e0a-63ff-429e-970f-3e78f11e26c9}">
         <property name="name">
             <value>Audio 1</value>

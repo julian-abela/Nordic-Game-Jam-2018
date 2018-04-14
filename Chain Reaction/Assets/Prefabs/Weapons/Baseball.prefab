@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireSpeed: 20
+  audioStart: event:/Baseball
 --- !u!135 &135210908859187166
 SphereCollider:
   m_ObjectHideFlags: 1
