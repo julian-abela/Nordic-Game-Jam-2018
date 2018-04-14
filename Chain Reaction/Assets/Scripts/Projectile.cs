@@ -2,14 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Weapon
-{
-    Baseball,
-    Car,
-    BowlingBall,
-    Missile
-}
-
 public class Projectile : MonoBehaviour
 {
     public float controlSpeed;
