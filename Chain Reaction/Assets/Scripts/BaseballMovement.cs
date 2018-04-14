@@ -38,17 +38,22 @@ public class BaseballMovement : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                target = hit.transform.position - transform.position;
+                target = hit.point - transform.position;
                 Rigidbody ballRigid = GetComponent<Rigidbody>();
                 ballRigid.useGravity = true;
-                ballRigid.AddForce((target + Vector3.up) * fireSpeed, ForceMode.Impulse);
+                ballRigid.AddForce(target.normalized* fireSpeed + Vector3.up * fireSpeed/10, ForceMode.Impulse);
+                ballRigid.AddTorque(transform.up * 1000 - transform.right * 1000);
 
                 audioParam.setValue(1f);
+                ballShot = true;
             }
         }
     }
 
-
+    private void OnCollisionEnter(Collision collision)
+    {
+        Destroy(this.gameObject, 2);
+    }
 
     private void OnDestroy()
     {
