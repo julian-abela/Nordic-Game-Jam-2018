@@ -12,7 +12,6 @@ public enum Weapon
 
 public class Projectile : MonoBehaviour
 {
-    public Transform target;
     public float controlSpeed;
     public float fireSpeed;
     public Weapon weaponType;
@@ -64,13 +63,14 @@ public class Projectile : MonoBehaviour
                     break;
                 case Weapon.Car:
                     carMoving = true;
+                    GetComponent<Rigidbody>().AddForce(transform.forward * fireSpeed, ForceMode.Force);
                     break;
             }
         }
 
-        if (carMoving)
+        if (carMoving && GetComponent<Rigidbody>().velocity.magnitude < fireSpeed/2)
         {
-            transform.position += transform.forward * fireSpeed * Time.deltaTime; ;
+            GetComponent<Rigidbody>().AddForce(-transform.right * fireSpeed, ForceMode.Force);
         }
     }
 

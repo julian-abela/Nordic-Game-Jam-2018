@@ -12,16 +12,16 @@ public class WeaponSelector: MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Instantiate(baseballPrefab, new Vector3(-1.5f, 2, -14), Quaternion.identity);
+            Instantiate(baseballPrefab, new Vector3(-1.5f, 2, -14), baseballPrefab.transform.rotation);
         } else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            Instantiate(missilePrefab, new Vector3(-1.5f, 2, -14), Quaternion.identity);
+            Instantiate(missilePrefab, new Vector3(-1.5f, 2, -14), missilePrefab.transform.rotation);
         } else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            Instantiate(bowlingBallPrefab, new Vector3(-1.5f, 10, 0), Quaternion.identity);
+            Instantiate(bowlingBallPrefab, new Vector3(-1.5f, 10, 0), bowlingBallPrefab.transform.rotation);
         } else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            Instantiate(carPrefab, new Vector3(-1.5f, 2, -14), Quaternion.identity);
+            Instantiate(carPrefab, new Vector3(-1.5f, 2, -14), carPrefab.transform.rotation);
         }
     }
 }
