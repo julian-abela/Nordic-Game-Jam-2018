@@ -63,7 +63,7 @@ public class WeaponController : MonoBehaviour {
                 currentWeapon = Instantiate(baseballPrefab, Vector3.MoveTowards(transform.position, lookTarget - new Vector3(0, 20, 0), spawnDistance), transform.rotation);
                 break;
             case Weapon.Missile:
-                currentWeapon = Instantiate(missilePrefab, Vector3.MoveTowards(transform.position, lookTarget, spawnDistance), transform.rotation);
+                currentWeapon = Instantiate(missilePrefab, Vector3.MoveTowards(transform.position, lookTarget - new Vector3(0, 20, 0), spawnDistance), transform.rotation);
                 break;
             case Weapon.BowlingBall:
                 currentWeapon = Instantiate(bowlingBallPrefab, Vector3.MoveTowards(transform.position, lookTarget, spawnDistance * 2), transform.rotation);
@@ -73,7 +73,7 @@ public class WeaponController : MonoBehaviour {
                 currentWeapon.transform.LookAt(lookTarget);
                 break;
             case Weapon.C4:
-                currentWeapon = Instantiate(c4Prefab, Vector3.MoveTowards(transform.position, lookTarget - new Vector3(0, 20, 0), spawnDistance), Quaternion.Euler(new Vector3(transform.rotation.x + 180, transform.rotation.y + 90, transform.rotation.z)));
+                currentWeapon = Instantiate(c4Prefab, Vector3.MoveTowards(transform.position, lookTarget - new Vector3(0, 20, 0), spawnDistance), transform.rotation);
                 break;
         }
     }
