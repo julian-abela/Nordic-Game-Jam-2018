@@ -14,6 +14,7 @@ public class AnvilScript : MonoBehaviour {
     private float lerpValue = .5f;
     private float inputSensitivity;
     private bool hasBeenUsed;
+    private bool oneShot;
 
     //Audio
     [EventRef]
@@ -30,6 +31,8 @@ public class AnvilScript : MonoBehaviour {
         rightEnd = transform.position + transform.right * range * -1f;
 
         eventStart = RuntimeManager.CreateInstance(audioStart);
+
+        oneShot = true;
 
     }
 
@@ -55,7 +58,12 @@ public class AnvilScript : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        eventStart.start();
+        if (oneShot)
+        {
+            eventStart.start();
+            oneShot = false;
+        }
+
     }
 
 }
