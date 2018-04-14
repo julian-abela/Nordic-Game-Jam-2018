@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum Weapon
 {
-    BaseBall,
+    Baseball,
     Car,
     BowlingBall,
     Missile
@@ -21,7 +21,7 @@ public class Projectile : MonoBehaviour
 
     private void Start()
     {
-        if (weaponType == Weapon.BaseBall || weaponType == Weapon.Car)
+        if (weaponType == Weapon.Baseball || weaponType == Weapon.Car)
         {
             GetComponent<Rigidbody>().useGravity = true;
         }
@@ -52,7 +52,7 @@ public class Projectile : MonoBehaviour
         {
             switch(weaponType)
             {
-                case Weapon.BaseBall:
+                case Weapon.Baseball:
                     GetComponent<Rigidbody>().AddForce((transform.forward * fireSpeed + transform.up * fireSpeed / 8), ForceMode.Impulse);
                     break;
                 case Weapon.Missile:
