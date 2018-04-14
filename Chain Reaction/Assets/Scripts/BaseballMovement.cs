@@ -30,10 +30,5 @@ public class BaseballMovement : MonoBehaviour
                 ballRigid.AddForce((target + Vector3.up) * fireSpeed, ForceMode.Impulse);
             }
         }
-
-        if (ballShot)
-        {
-            GetComponent<Rigidbody>().AddForce(target * fireSpeed, ForceMode.Impulse);
-        }
     }
 }

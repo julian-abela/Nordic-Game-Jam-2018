@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114210996783698964}
+<<<<<<< HEAD
   - {fileID: 114185290366370014}
   EditorEvents:
   - {fileID: 114846955184442682}
@@ -73,6 +74,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
 --- !u!114 &114046800903846752
+=======
+  - {fileID: 114462662033420936}
+  EditorEvents:
+  - {fileID: 114846955184442682}
+  - {fileID: 114969004767492872}
+  - {fileID: 114640249071340550}
+  - {fileID: 114286062928651450}
+  - {fileID: 114290450861576004}
+  - {fileID: 114071535942117054}
+  - {fileID: 114345041906586296}
+  - {fileID: 114495721149317514}
+  MasterBankRef: {fileID: 114462662033420936}
+  StringsBankRef: {fileID: 114210996783698964}
+  stringsBankWriteTime: 636593382976583203
+  cacheVersion: 2
+--- !u!114 &114071535942117054
+>>>>>>> 2ec08bbb55b3f657d8acf9e6c1b84611d65e1ab5
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -83,9 +101,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: event:/Missile
-  guid: 0b65c9d8e4e4fc458e1a49ffafe54ea1
+  Path: event:/Anvil
+  guid: 6dff609d91bd5d4ba1589a7079522904
   Banks:
+<<<<<<< HEAD
   - {fileID: 114185290366370014}
   IsStream: 1
   Is3D: 1
@@ -128,11 +147,17 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
+=======
+  - {fileID: 114462662033420936}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+>>>>>>> 2ec08bbb55b3f657d8acf9e6c1b84611d65e1ab5
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 27428
---- !u!114 &114154566104358102
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3000
+--- !u!114 &114114415848033994
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -143,14 +168,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: /Users/madsr/Documents/GitHub/Nordic-Game-Jam-2018/Chain Reaction/FMOD/NGJ2018/Build/Desktop/Master
+  Path: C:\Users\Johannes\Documents\GitHub\Nordic-Game-Jam-2018\Chain Reaction\FMOD\NGJ2018\Build\Desktop\Master
     Bank.bank
-  lastModified: 636593134370000000
+  lastModified: 636593215719792518
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 129888
   Exists: 1
+<<<<<<< HEAD
 --- !u!114 &114171050110593956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,6 +212,9 @@ MonoBehaviour:
     Value: 828544
   Exists: 1
 --- !u!114 &114192026431645406
+=======
+--- !u!114 &114154566104358102
+>>>>>>> 2ec08bbb55b3f657d8acf9e6c1b84611d65e1ab5
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -196,14 +225,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: D:\Repos\nordic\Nordic-Game-Jam-2018\Chain Reaction\FMOD\NGJ2018\Build\Desktop\Master
+  Path: /Users/madsr/Documents/GitHub/Nordic-Game-Jam-2018/Chain Reaction/FMOD/NGJ2018/Build/Desktop/Master
     Bank.bank
-  lastModified: 636593254330693345
+  lastModified: 636593134370000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 129888
   Exists: 1
+<<<<<<< HEAD
 --- !u!114 &114199718704576062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,6 +250,9 @@ MonoBehaviour:
   Max: 1
   Default: 0
 --- !u!114 &114201514376560142
+=======
+--- !u!114 &114163684017115292
+>>>>>>> 2ec08bbb55b3f657d8acf9e6c1b84611d65e1ab5
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -230,7 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Truck_drive
+  Name: Missile
   Min: 0
   Max: 1
   Default: 0
@@ -245,14 +278,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   Path: FMOD/NGJ2018/Build/Desktop/Master Bank.strings.bank
   lastModified: 636593445120000000
+=======
+  Path: FMOD/NGJ2018\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636593382976583203
+>>>>>>> 2ec08bbb55b3f657d8acf9e6c1b84611d65e1ab5
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 1014
   Exists: 1
+<<<<<<< HEAD
 --- !u!114 &114218727038669676
+=======
+--- !u!114 &114220036418683416
+>>>>>>> 2ec08bbb55b3f657d8acf9e6c1b84611d65e1ab5
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -263,7 +305,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   Name: Truck_drive
+=======
+  Name: Pitch
+>>>>>>> 2ec08bbb55b3f657d8acf9e6c1b84611d65e1ab5
   Min: 0
   Max: 1
   Default: 0
@@ -285,6 +331,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 129888
+<<<<<<< HEAD
   Exists: 1
 --- !u!114 &114266803823766128
 MonoBehaviour:
@@ -301,6 +348,9 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+=======
+  Exists: 0
+>>>>>>> 2ec08bbb55b3f657d8acf9e6c1b84611d65e1ab5
 --- !u!114 &114277770040105780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,22 +369,7 @@ MonoBehaviour:
   - Name: Desktop
     Value: 770
   Exists: 1
---- !u!114 &114316520716754060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Baseball
-  Min: 0
-  Max: 1
-  Default: 0
---- !u!114 &114333037661292500
+--- !u!114 &114286062928651450
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -345,17 +380,100 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: event:/Anvil
-  guid: 6dff609d91bd5d4ba1589a7079522904
+  Path: event:/Missile
+  guid: 0b65c9d8e4e4fc458e1a49ffafe54ea1
   Banks:
-  - {fileID: 114185290366370014}
+  - {fileID: 114462662033420936}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 114163684017115292}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 26969
+--- !u!114 &114290450861576004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Baseball
+  guid: 10a6821e5b9bdf4b863ceca234b118e8
+  Banks:
+  - {fileID: 114462662033420936}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 3000
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &114308448014298538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Crash
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114345041906586296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Debris
+  guid: 8ff37df0a0b4b946ac5eb8db471e9103
+  Banks:
+<<<<<<< HEAD
+  - {fileID: 114185290366370014}
+=======
+  - {fileID: 114462662033420936}
+>>>>>>> 2ec08bbb55b3f657d8acf9e6c1b84611d65e1ab5
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &114359636498609612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Downloads\Game Development\Nordic Game Jam 2018\Chain Reaction\FMOD\NGJ2018\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636593363895517648
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 235680
+  Exists: 1
 --- !u!114 &114372923571292354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -412,6 +530,7 @@ MonoBehaviour:
   - Name: Desktop
     Value: 129888
   Exists: 1
+<<<<<<< HEAD
 --- !u!114 &114493871762119338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,6 +562,9 @@ MonoBehaviour:
   Max: 1
   Default: 0
 --- !u!114 &114507338836986406
+=======
+--- !u!114 &114462662033420936
+>>>>>>> 2ec08bbb55b3f657d8acf9e6c1b84611d65e1ab5
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -453,12 +575,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: D:\Downloads\Game Development\Nordic Game Jam 2018\Chain Reaction\FMOD\NGJ2018\Build\Desktop\Master
+  Path: C:\Users\Johannes\Documents\GitHub\Nordic-Game-Jam-2018\Chain Reaction\FMOD\NGJ2018\Build\Desktop\Master
     Bank.bank
-  lastModified: 636593215568023677
+  lastModified: 636593382976568193
   LoadResult: 0
   FileSizes:
   - Name: Desktop
+<<<<<<< HEAD
     Value: 129888
   Exists: 0
 --- !u!114 &114515163264320452
@@ -477,6 +600,77 @@ MonoBehaviour:
   Max: 1
   Default: 0
 --- !u!114 &114602406766550346
+=======
+    Value: 441024
+  Exists: 1
+--- !u!114 &114495721149317514
+>>>>>>> 2ec08bbb55b3f657d8acf9e6c1b84611d65e1ab5
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Music
+  guid: 9c256345cdb21c43860c10a761a0b98f
+  Banks:
+  - {fileID: 114462662033420936}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+<<<<<<< HEAD
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 428
+--- !u!114 &114643852102130598
+=======
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &114507338836986406
+>>>>>>> 2ec08bbb55b3f657d8acf9e6c1b84611d65e1ab5
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+<<<<<<< HEAD
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Button
+  guid: 8ff37df0a0b4b946ac5eb8db471e9103
+  Banks:
+  - {fileID: 114185290366370014}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 149
+--- !u!114 &114645679491396586
+=======
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Downloads\Game Development\Nordic Game Jam 2018\Chain Reaction\FMOD\NGJ2018\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636593215568023677
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 129888
+  Exists: 0
+--- !u!114 &114602406766550346
+>>>>>>> 2ec08bbb55b3f657d8acf9e6c1b84611d65e1ab5
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -495,50 +689,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 428
---- !u!114 &114643852102130598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/Button
-  guid: 8ff37df0a0b4b946ac5eb8db471e9103
-  Banks:
-  - {fileID: 114185290366370014}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 149
---- !u!114 &114645679491396586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/Debris
-  guid: 8ff37df0a0b4b946ac5eb8db471e9103
-  Banks:
-  - {fileID: 114785488955124236}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
+<<<<<<< HEAD
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -618,6 +769,12 @@ MonoBehaviour:
   Max: 1
   Default: 0
 --- !u!114 &114765513532237892
+=======
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 428
+--- !u!114 &114640249071340550
+>>>>>>> 2ec08bbb55b3f657d8acf9e6c1b84611d65e1ab5
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -628,19 +785,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: event:/Baseball
-  guid: 10a6821e5b9bdf4b863ceca234b118e8
+  Path: event:/Truck
+  guid: 292b53b9762d9f4994b05a64ef0ddbd0
   Banks:
+<<<<<<< HEAD
   - {fileID: 114185290366370014}
+=======
+  - {fileID: 114462662033420936}
+>>>>>>> 2ec08bbb55b3f657d8acf9e6c1b84611d65e1ab5
   IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
+  Is3D: 0
+  IsOneShot: 0
   Parameters:
+<<<<<<< HEAD
   - {fileID: 114933652390166658}
   MinDistance: 1
   MaxDistance: 20
   Length: 8000
 --- !u!114 &114785488955124236
+=======
+  - {fileID: 114846504824096396}
+  - {fileID: 114697577875394676}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 12857
+--- !u!114 &114697577875394676
+>>>>>>> 2ec08bbb55b3f657d8acf9e6c1b84611d65e1ab5
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -648,9 +818,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   Path: /Users/kasperchansen/Documents/ITU/Game Project/Nordic-Game-Jam-2018/Chain
     Reaction/FMOD/NGJ2018/Build/Desktop/Master Bank.bank
   lastModified: 636593412670000000
@@ -675,6 +846,13 @@ MonoBehaviour:
   Max: 1
   Default: 0
 --- !u!114 &114830991035153268
+=======
+  Name: Crash
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114846504824096396
+>>>>>>> 2ec08bbb55b3f657d8acf9e6c1b84611d65e1ab5
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -685,7 +863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Truck_Crash
+  Name: Pitch
   Min: 0
   Max: 1
   Default: 0
@@ -703,7 +881,11 @@ MonoBehaviour:
   Path: event:/Bomb_bip
   guid: 34eb319ecea80641a26ce73ea5cd4178
   Banks:
+<<<<<<< HEAD
   - {fileID: 114185290366370014}
+=======
+  - {fileID: 114462662033420936}
+>>>>>>> 2ec08bbb55b3f657d8acf9e6c1b84611d65e1ab5
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -711,6 +893,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 428
+<<<<<<< HEAD
 --- !u!114 &114848655112208302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -825,6 +1008,8 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+=======
+>>>>>>> 2ec08bbb55b3f657d8acf9e6c1b84611d65e1ab5
 --- !u!114 &114969004767492872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -839,7 +1024,11 @@ MonoBehaviour:
   Path: event:/Explosion
   guid: 796c9c6da602a94ea5ff48437455a2e4
   Banks:
+<<<<<<< HEAD
   - {fileID: 114185290366370014}
+=======
+  - {fileID: 114462662033420936}
+>>>>>>> 2ec08bbb55b3f657d8acf9e6c1b84611d65e1ab5
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
