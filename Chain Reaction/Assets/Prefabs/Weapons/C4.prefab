@@ -21,8 +21,9 @@ GameObject:
   - component: {fileID: 4415486636623808}
   - component: {fileID: 33839656230350362}
   - component: {fileID: 23318664304493540}
+  - component: {fileID: 114586955141715588}
   m_Layer: 0
-  m_Name: c4-charge
+  m_Name: C4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,9 +35,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1073999950916000}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.07347695, y: 0.062175497, z: 0.9999572}
-  m_LocalScale: {x: 390.63068, y: 206.1612, z: 144.28267}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -86,3 +87,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1073999950916000}
   m_Mesh: {fileID: 4300000, guid: a8f1f47fffc5d402086ad9b8d200ae65, type: 3}
+--- !u!114 &114586955141715588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1073999950916000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1930054175cce42dfa9429105477ac9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bomb: {fileID: 1843512426003846, guid: da7e3999f81724e139d747cfeb3366cc, type: 2}
