@@ -58,6 +58,7 @@ public class TruckScript : MonoBehaviour {
         else 
         {
             truckCrash.setValue(1f);
+            Destroy(this.gameObject, 2);
         }
     }
 
