@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using FMOD.Studio;
+using FMODUnity;
 
 public class CanvasScore : MonoBehaviour {
 
@@ -12,6 +14,12 @@ public class CanvasScore : MonoBehaviour {
     public Dictionary<PlayerScore.PlayerNr, PlayerScore> buildings;
     public Text[] playerTextScores;
     public Dictionary<ScoreDestructableComponent.DestructableType, int> typeToPoints;
+
+    //Audio
+    [EventRef]
+    public string audioStart;
+
+    EventInstance eventStart;
 
     private void Awake()
     {
@@ -26,6 +34,11 @@ public class CanvasScore : MonoBehaviour {
         typeToPoints = new Dictionary<ScoreDestructableComponent.DestructableType, int>();
         typeToPoints.Add(ScoreDestructableComponent.DestructableType.Roof, 10);
         typeToPoints.Add(ScoreDestructableComponent.DestructableType.Wall, 1);
+    }
+
+    private void Start()
+    {
+        eventStart = RuntimeManager.CreateInstance(audioStart);
     }
 
     private void Update()
@@ -43,6 +56,8 @@ public class CanvasScore : MonoBehaviour {
     public void AddScore(PlayerScore.PlayerNr playerNr, ScoreDestructableComponent.DestructableType type)
     {
         SetScore(playerNr, buildings[playerNr].score + typeToPoints[type]);
+        eventStart.start();
+
     }
 
     public void SetScore(PlayerScore.PlayerNr playerNr, int score)
