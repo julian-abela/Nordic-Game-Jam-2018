@@ -13,13 +13,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114210996783698964}
-  - {fileID: 114114415848033994}
+  - {fileID: 114290389709302310}
   EditorEvents:
   - {fileID: 114846955184442682}
   - {fileID: 114969004767492872}
-  MasterBankRef: {fileID: 114114415848033994}
+  - {fileID: 114360569909898060}
+  MasterBankRef: {fileID: 114290389709302310}
   StringsBankRef: {fileID: 114210996783698964}
-  stringsBankWriteTime: 636593215719807409
+  stringsBankWriteTime: 636593364590000000
   cacheVersion: 2
 --- !u!114 &114114415848033994
 MonoBehaviour:
@@ -70,12 +71,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: FMOD/NGJ2018\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636593215719807409
+  Path: FMOD/NGJ2018/Build/Desktop/Master Bank.strings.bank
+  lastModified: 636593364590000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 770
+    Value: 806
   Exists: 1
 --- !u!114 &114247283722290912
 MonoBehaviour:
@@ -114,6 +115,64 @@ MonoBehaviour:
   - Name: Desktop
     Value: 770
   Exists: 1
+--- !u!114 &114290389709302310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /Users/kasperchansen/Documents/ITU/Game Project/Nordic-Game-Jam-2018/Chain
+    Reaction/FMOD/NGJ2018/Build/Desktop/Master Bank.bank
+  lastModified: 636593364590000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 235680
+  Exists: 1
+--- !u!114 &114357381315167820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Crash
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114360569909898060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Truck
+  guid: 292b53b9762d9f4994b05a64ef0ddbd0
+  Banks:
+  - {fileID: 114290389709302310}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114783040555477258}
+  - {fileID: 114357381315167820}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 12857
 --- !u!114 &114372923571292354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,6 +255,21 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 428
+--- !u!114 &114783040555477258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114846955184442682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,7 +284,7 @@ MonoBehaviour:
   Path: event:/Bomb_bip
   guid: 34eb319ecea80641a26ce73ea5cd4178
   Banks:
-  - {fileID: 114114415848033994}
+  - {fileID: 114290389709302310}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -232,7 +306,7 @@ MonoBehaviour:
   Path: event:/Explosion
   guid: 796c9c6da602a94ea5ff48437455a2e4
   Banks:
-  - {fileID: 114114415848033994}
+  - {fileID: 114290389709302310}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
