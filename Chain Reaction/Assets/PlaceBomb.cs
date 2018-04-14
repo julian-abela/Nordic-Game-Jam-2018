@@ -21,7 +21,8 @@ public class PlaceBomb : MonoBehaviour {
             if (Physics.Raycast(ray, out hit))
             {
                 Transform objectHit = hit.transform;
-                Instantiate(bomb,hit.point,objectHit.rotation);
+                var toPlace = Instantiate(bomb, hit.point, Quaternion.Euler(new Vector3(objectHit.rotation.eulerAngles.x,objectHit.rotation.eulerAngles.y,objectHit.rotation.eulerAngles.z+90)));
+                toPlace.transform.parent = objectHit;
 
             }
         }
