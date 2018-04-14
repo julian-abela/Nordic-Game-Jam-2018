@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 1189230272424950, guid: 24c6525402f4c46baa7978ac0a9bacc7, type: 2}
-  explosionForce: 40000
+  explosionForce: 20000
   maxSize: 2
   timer: 2
   audioBombBip: 
