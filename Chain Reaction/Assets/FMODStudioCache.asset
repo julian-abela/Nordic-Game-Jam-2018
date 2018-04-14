@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114210996783698964}
-  - {fileID: 114785488955124236}
+  - {fileID: 114185290366370014}
   EditorEvents:
   - {fileID: 114846955184442682}
   - {fileID: 114969004767492872}
@@ -21,11 +21,11 @@ MonoBehaviour:
   - {fileID: 114765513532237892}
   - {fileID: 114870965620913088}
   - {fileID: 114333037661292500}
-  - {fileID: 114645679491396586}
   - {fileID: 114152989432701408}
-  MasterBankRef: {fileID: 114785488955124236}
+  - {fileID: 114643852102130598}
+  MasterBankRef: {fileID: 114185290366370014}
   StringsBankRef: {fileID: 114210996783698964}
-  stringsBankWriteTime: 636593384890000000
+  stringsBankWriteTime: 636593445120000000
   cacheVersion: 2
 --- !u!114 &114012588447419666
 MonoBehaviour:
@@ -39,6 +39,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Missile
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114018992004003860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Truck_drive
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114030100536994718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Truck_Crash
   Min: 0
   Max: 1
   Default: 0
@@ -56,15 +86,30 @@ MonoBehaviour:
   Path: event:/Missile
   guid: 0b65c9d8e4e4fc458e1a49ffafe54ea1
   Banks:
-  - {fileID: 114785488955124236}
+  - {fileID: 114185290366370014}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 114012588447419666}
+  - {fileID: 114788129926605440}
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 100
   Length: 26969
+--- !u!114 &114086379431032638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Baseball
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114152989432701408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,7 +124,7 @@ MonoBehaviour:
   Path: event:/Music
   guid: 9c256345cdb21c43860c10a761a0b98f
   Banks:
-  - {fileID: 114785488955124236}
+  - {fileID: 114185290366370014}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -106,6 +151,40 @@ MonoBehaviour:
   - Name: Desktop
     Value: 129888
   Exists: 1
+--- !u!114 &114171050110593956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Baseball
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114185290366370014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /Users/madsr/Documents/GitHub/Nordic-Game-Jam-2018/Chain Reaction/FMOD/NGJ2018/Build/Desktop/Master
+    Bank.bank
+  lastModified: 636593445120000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 828544
+  Exists: 1
 --- !u!114 &114192026431645406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,6 +204,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 129888
   Exists: 1
+--- !u!114 &114199718704576062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Truck_drive
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114201514376560142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,12 +246,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD/NGJ2018/Build/Desktop/Master Bank.strings.bank
-  lastModified: 636593384890000000
+  lastModified: 636593445120000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 1014
   Exists: 1
+--- !u!114 &114218727038669676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Truck_drive
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114247283722290912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +286,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 129888
   Exists: 1
+--- !u!114 &114266803823766128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Truck_Crash
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114277770040105780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,7 +348,7 @@ MonoBehaviour:
   Path: event:/Anvil
   guid: 6dff609d91bd5d4ba1589a7079522904
   Banks:
-  - {fileID: 114785488955124236}
+  - {fileID: 114185290366370014}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -254,6 +378,21 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3718
+--- !u!114 &114409175461618814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Missile
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114429516096504316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,6 +412,36 @@ MonoBehaviour:
   - Name: Desktop
     Value: 129888
   Exists: 1
+--- !u!114 &114493871762119338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Missile
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114499407627941816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Missile
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114507338836986406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,6 +461,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 129888
   Exists: 0
+--- !u!114 &114515163264320452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Truck_Crash
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114602406766550346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,6 +498,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 428
+--- !u!114 &114643852102130598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Button
+  guid: 8ff37df0a0b4b946ac5eb8db471e9103
+  Banks:
+  - {fileID: 114185290366370014}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 149
 --- !u!114 &114645679491396586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,6 +542,81 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &114655349145015952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Baseball
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114672673929720412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Truck_drive
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114716307909013272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Truck_Crash
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114737620459756872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Truck_drive
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114763418500708566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Missile
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114765513532237892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,12 +631,12 @@ MonoBehaviour:
   Path: event:/Baseball
   guid: 10a6821e5b9bdf4b863ceca234b118e8
   Banks:
-  - {fileID: 114785488955124236}
+  - {fileID: 114185290366370014}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 114316520716754060}
+  - {fileID: 114933652390166658}
   MinDistance: 1
   MaxDistance: 20
   Length: 8000
@@ -378,6 +659,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 825920
   Exists: 1
+--- !u!114 &114788129926605440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Missile
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114830991035153268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,7 +703,7 @@ MonoBehaviour:
   Path: event:/Bomb_bip
   guid: 34eb319ecea80641a26ce73ea5cd4178
   Banks:
-  - {fileID: 114785488955124236}
+  - {fileID: 114185290366370014}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -415,6 +711,36 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 428
+--- !u!114 &114848655112208302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Truck_Crash
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114867845790738508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Truck_drive
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114870965620913088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,16 +755,76 @@ MonoBehaviour:
   Path: event:/Truck
   guid: 292b53b9762d9f4994b05a64ef0ddbd0
   Banks:
-  - {fileID: 114785488955124236}
+  - {fileID: 114185290366370014}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 114201514376560142}
-  - {fileID: 114830991035153268}
-  MinDistance: 0
-  MaxDistance: 0
+  - {fileID: 114018992004003860}
+  - {fileID: 114030100536994718}
+  MinDistance: 1
+  MaxDistance: 100
   Length: 12857
+--- !u!114 &114880580851510420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Baseball
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114902639219328686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Baseball
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114933652390166658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Baseball
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114951613462451336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Truck_Crash
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114969004767492872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -453,7 +839,7 @@ MonoBehaviour:
   Path: event:/Explosion
   guid: 796c9c6da602a94ea5ff48437455a2e4
   Banks:
-  - {fileID: 114785488955124236}
+  - {fileID: 114185290366370014}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -461,3 +847,18 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3718
+--- !u!114 &114998842286059978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Missile
+  Min: 0
+  Max: 1
+  Default: 0
