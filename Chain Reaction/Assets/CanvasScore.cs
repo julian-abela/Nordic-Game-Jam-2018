@@ -15,11 +15,17 @@ public class CanvasScore : MonoBehaviour {
     public Text[] playerTextScores;
     public Dictionary<ScoreDestructableComponent.DestructableType, int> typeToPoints;
 
+
+    private bool playAudio;
+    public float audioCooldown;
+    private float timer;
+
     //Audio
     [EventRef]
     public string audioStart;
 
     EventInstance eventStart;
+
 
     private void Awake()
     {
@@ -39,12 +45,24 @@ public class CanvasScore : MonoBehaviour {
     private void Start()
     {
         eventStart = RuntimeManager.CreateInstance(audioStart);
+        playAudio = true;
+        timer = audioCooldown;
     }
 
     private void Update()
     {
         if (Input.GetKeyUp(KeyCode.R))
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        if (playAudio == false)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                timer = audioCooldown;
+                playAudio = true;
+            }
+        }
     }
 
     internal void Register(PlayerScore.PlayerNr owner, ScoreDestructableComponent.DestructableType type)
@@ -56,8 +74,13 @@ public class CanvasScore : MonoBehaviour {
     public void AddScore(PlayerScore.PlayerNr playerNr, ScoreDestructableComponent.DestructableType type)
     {
         SetScore(playerNr, buildings[playerNr].score + typeToPoints[type]);
-        eventStart.start();
 
+        if (playAudio)
+        {
+            eventStart.start();
+
+            playAudio = false;
+        }
     }
 
     public void SetScore(PlayerScore.PlayerNr playerNr, int score)
