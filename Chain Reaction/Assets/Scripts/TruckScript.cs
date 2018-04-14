@@ -28,7 +28,7 @@ public class TruckScript : MonoBehaviour {
         eventStart = RuntimeManager.CreateInstance(audioStart);
         RuntimeManager.AttachInstanceToGameObject(eventStart, transform, GetComponent<Rigidbody>());
         eventStart.getParameter("Truck_drive", out truckDrive);
-        eventStart.getParameter("Truck_crash", out truckCrash);
+        eventStart.getParameter("Truck_Crash", out truckCrash);
         eventStart.start();
 	}
 	
@@ -58,6 +58,7 @@ public class TruckScript : MonoBehaviour {
         else 
         {
             truckCrash.setValue(1f);
+            Destroy(this.gameObject, 2);
         }
     }
 

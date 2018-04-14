@@ -32315,7 +32315,7 @@ MonoBehaviour:
     type: 2}
   bowlingBallPrefab: {fileID: 1426432316725420, guid: 0e2c9e980b7b42a478dc06911cf45a3a,
     type: 2}
-  carPrefab: {fileID: 1413209183}
+  carPrefab: {fileID: 1326647121258910, guid: 994d3874e07d2421da8c662cc0b979eb, type: 2}
   c4Prefab: {fileID: 0}
 --- !u!4 &2104666015 stripped
 Transform:
