@@ -18,16 +18,9 @@ public class Projectile : MonoBehaviour
 
     private bool carMoving;
 
-    private void Start()
-    {
-        if (weaponType == Weapon.Baseball || weaponType == Weapon.Car)
-        {
-            GetComponent<Rigidbody>().useGravity = true;
-        }
-    }
-
     void Update()
     {
+        /*
         float step = controlSpeed * Time.deltaTime;
 
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
@@ -46,12 +39,14 @@ public class Projectile : MonoBehaviour
         {
             transform.position += transform.up * step;
         }
+        */
 
         if (Input.GetKey(KeyCode.Space))
         {
             switch(weaponType)
             {
                 case Weapon.Baseball:
+                    GetComponent<Rigidbody>().useGravity = true;
                     GetComponent<Rigidbody>().AddForce((transform.forward * fireSpeed + transform.up * fireSpeed / 8), ForceMode.Impulse);
                     break;
                 case Weapon.Missile:
@@ -63,6 +58,7 @@ public class Projectile : MonoBehaviour
                     break;
                 case Weapon.Car:
                     carMoving = true;
+                    GetComponent<Rigidbody>().useGravity = true;
                     GetComponent<Rigidbody>().AddForce(transform.forward * fireSpeed, ForceMode.Force);
                     break;
             }

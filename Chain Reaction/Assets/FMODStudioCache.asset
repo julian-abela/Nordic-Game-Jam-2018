@@ -13,13 +13,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114210996783698964}
-  - {fileID: 114429516096504316}
+  - {fileID: 114247283722290912}
   EditorEvents:
   - {fileID: 114846955184442682}
   - {fileID: 114969004767492872}
-  MasterBankRef: {fileID: 114429516096504316}
+  MasterBankRef: {fileID: 114247283722290912}
   StringsBankRef: {fileID: 114210996783698964}
-  stringsBankWriteTime: 636593215719807409
+  stringsBankWriteTime: 636593215568038724
   cacheVersion: 2
 --- !u!114 &114154566104358102
 MonoBehaviour:
@@ -52,11 +52,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD/NGJ2018\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636593215719807409
+  lastModified: 636593215568038724
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 770
+  Exists: 1
+--- !u!114 &114247283722290912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Downloads\Game Development\Nordic Game Jam 2018\Chain Reaction\FMOD\NGJ2018\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636593215568023677
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 129888
   Exists: 1
 --- !u!114 &114277770040105780
 MonoBehaviour:
@@ -172,7 +191,7 @@ MonoBehaviour:
   Path: event:/Bomb_bip
   guid: 34eb319ecea80641a26ce73ea5cd4178
   Banks:
-  - {fileID: 114429516096504316}
+  - {fileID: 114247283722290912}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -194,7 +213,7 @@ MonoBehaviour:
   Path: event:/Explosion
   guid: 796c9c6da602a94ea5ff48437455a2e4
   Banks:
-  - {fileID: 114429516096504316}
+  - {fileID: 114247283722290912}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
