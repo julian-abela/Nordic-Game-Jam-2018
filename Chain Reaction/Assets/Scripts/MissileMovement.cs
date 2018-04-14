@@ -8,11 +8,14 @@ public class MissileMovement : MonoBehaviour
     public float explosionStrength = 10000000000000000;
     public float explosionRadius = 500;
 
+    private bool missileShot = false;
+
     void Update()
     {
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKey(KeyCode.Mouse0) && !missileShot)
         {
             GetComponent<Rigidbody>().AddForce(transform.forward * fireSpeed, ForceMode.Force);
+            missileShot = true;
         }
     }
 
