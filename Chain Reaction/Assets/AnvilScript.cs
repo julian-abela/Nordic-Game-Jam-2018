@@ -15,7 +15,7 @@ public class AnvilScript : MonoBehaviour {
     {
         inputSensitivity = 1f / range;
         body = GetComponent<Rigidbody>();
-        transform.position += new Vector3(0,2f);
+        transform.position += new Vector3(0,6f);
         leftEnd = transform.position + transform.right * range;
         rightEnd = transform.position + transform.right * range * -1f;
     }
