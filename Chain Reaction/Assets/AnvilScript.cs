@@ -14,6 +14,7 @@ public class AnvilScript : MonoBehaviour {
     private float lerpValue = .5f;
     private float inputSensitivity;
     private bool hasBeenUsed;
+    private bool oneShot;
 
     //Audio
     [EventRef]
@@ -31,6 +32,8 @@ public class AnvilScript : MonoBehaviour {
 
         eventStart = RuntimeManager.CreateInstance(audioStart);
 
+        oneShot = true;
+
     }
 
     void Update ()
@@ -44,6 +47,7 @@ public class AnvilScript : MonoBehaviour {
             body.useGravity = true;
             body.AddForce(Vector3.down * fireSpeed, ForceMode.Force);
             hasBeenUsed = true;
+            WeaponController.instance.cameraLocked = false;
         }
         else
         {
@@ -55,7 +59,12 @@ public class AnvilScript : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        eventStart.start();
+        if (oneShot)
+        {
+            eventStart.start();
+            oneShot = false;
+        }
+
     }
 
 }
