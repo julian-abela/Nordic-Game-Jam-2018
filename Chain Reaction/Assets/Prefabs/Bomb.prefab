@@ -123,6 +123,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c76b0a4b51cf34d33b8cc4460b4bd65e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionForce: 50
+  explosion: {fileID: 1189230272424950, guid: 24c6525402f4c46baa7978ac0a9bacc7, type: 2}
+  explosionForce: 1000
   maxSize: 1
   timer: 2
+  audioBombBip: 
+  audioExplosion: 

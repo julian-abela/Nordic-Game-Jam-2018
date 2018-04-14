@@ -6,14 +6,17 @@ using FMOD.Studio;
 
 public class BombScript : MonoBehaviour {
 
-    private SphereCollider sc;
     private Rigidbody rb;
+    private MeshRenderer mr;
+    private float timeCount;
+    private int lastTickSecond;
+    private bool exploded;
 
+    public GameObject explosion;
     public float explosionForce = 5f;
     public float maxSize;
     public float timer;
-    private float timeCount;
-    private int lastTickSecond;
+
 
 
     //Audio
@@ -32,14 +35,17 @@ public class BombScript : MonoBehaviour {
         timeCount = timer;
         lastTickSecond = Mathf.FloorToInt(timer);
 
-        sc = GetComponent<SphereCollider>();
         rb = GetComponent<Rigidbody>();
+        mr = GetComponent<MeshRenderer>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (timeCount <= 0f)
+        if (timeCount <= 0f && !exploded)
         {
+            exploded = true;
+            var particle = Instantiate(explosion,transform.position,Quaternion.identity);
+            mr.enabled = false;
 
             Vector3 explosionPos = transform.position;
             Collider[] colliders = Physics.OverlapSphere(explosionPos, maxSize);
@@ -50,7 +56,7 @@ public class BombScript : MonoBehaviour {
                 if (rigidBody != null)
                 {
                     rigidBody.AddExplosionForce(explosionForce, explosionPos, maxSize);
-                    ExplosionSound();
+                    //ExplosionSound();
                 }
             }
         }
@@ -59,8 +65,8 @@ public class BombScript : MonoBehaviour {
             int second = Mathf.FloorToInt(timeCount);
             if(second < lastTickSecond){
                 lastTickSecond = second;
-                eventBombBip = RuntimeManager.CreateInstance(audioBombBip);
-                eventBombBip.start();
+                //eventBombBip = RuntimeManager.CreateInstance(audioBombBip);
+                //eventBombBip.start();
                 Debug.Log(timeCount);
             }
             timeCount -= Time.deltaTime;
