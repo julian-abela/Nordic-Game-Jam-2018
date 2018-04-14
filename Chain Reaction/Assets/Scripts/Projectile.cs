@@ -4,9 +4,18 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-
     public Transform target;
     public float speed;
+    public bool tennisBall;
+
+    private void Start()
+    {
+        if (tennisBall)
+        {
+            GetComponent<Rigidbody>().useGravity = true;
+        }
+    }
+
     void Update()
     {
         float step = speed * Time.deltaTime;
@@ -30,11 +39,22 @@ public class Projectile : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space))
         {
-            // transform.position = Vector3.MoveTowards(transform.position, target.position, step);
-            transform.position = transform.position + transform.forward * step;
-        } else if (Input.GetKey(KeyCode.LeftControl))
+            if (tennisBall)
+            {
+                GetComponent<Rigidbody>().AddForce((transform.forward * speed + transform.up * speed/8), ForceMode.Impulse);
+
+            } else
+            {
+                GetComponent<Rigidbody>().AddForce(transform.forward * speed * 50, ForceMode.Force);
+            }
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (!tennisBall)
         {
-            transform.position = transform.position - transform.forward * step;
+            Destroy(this.gameObject, 0.1f);
         }
     }
 }
