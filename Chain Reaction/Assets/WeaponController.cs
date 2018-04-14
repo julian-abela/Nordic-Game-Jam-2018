@@ -66,7 +66,8 @@ public class WeaponController : MonoBehaviour {
                     currentWeapon = Instantiate(bowlingBallPrefab, Vector3.MoveTowards(transform.position, lookTarget, spawnDistance*2), transform.rotation);
                     break;
                 case Weapon.Car:
-                    currentWeapon = Instantiate(carPrefab, Vector3.MoveTowards(transform.position, lookTarget, spawnDistance), transform.rotation);
+                    currentWeapon = Instantiate(carPrefab, Vector3.MoveTowards(transform.position, lookTarget, spawnDistance), Quaternion.Euler(new Vector3(transform.rotation.x+180,transform.rotation.y+90,transform.rotation.z)));
+                    currentWeapon.transform.LookAt(lookTarget);
                     break;
             }
         }
