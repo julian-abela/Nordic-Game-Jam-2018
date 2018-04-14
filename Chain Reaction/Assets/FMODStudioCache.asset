@@ -13,13 +13,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114210996783698964}
-  - {fileID: 114507338836986406}
+  - {fileID: 114429516096504316}
   EditorEvents:
   - {fileID: 114846955184442682}
   - {fileID: 114969004767492872}
-  MasterBankRef: {fileID: 114507338836986406}
+  MasterBankRef: {fileID: 114429516096504316}
   StringsBankRef: {fileID: 114210996783698964}
-  stringsBankWriteTime: 636593215568038724
+  stringsBankWriteTime: 636593215719807409
   cacheVersion: 2
 --- !u!114 &114154566104358102
 MonoBehaviour:
@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD/NGJ2018\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636593215568038724
+  lastModified: 636593215719807409
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -98,6 +98,25 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3718
+--- !u!114 &114429516096504316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Johannes\Documents\GitHub\Nordic-Game-Jam-2018\Chain Reaction\FMOD\NGJ2018\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636593215719792518
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 129888
+  Exists: 1
 --- !u!114 &114507338836986406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,7 +135,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 129888
-  Exists: 1
+  Exists: 0
 --- !u!114 &114602406766550346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,7 +172,7 @@ MonoBehaviour:
   Path: event:/Bomb_bip
   guid: 34eb319ecea80641a26ce73ea5cd4178
   Banks:
-  - {fileID: 114507338836986406}
+  - {fileID: 114429516096504316}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -175,7 +194,7 @@ MonoBehaviour:
   Path: event:/Explosion
   guid: 796c9c6da602a94ea5ff48437455a2e4
   Banks:
-  - {fileID: 114507338836986406}
+  - {fileID: 114429516096504316}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
