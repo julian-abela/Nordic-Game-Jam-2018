@@ -43,8 +43,11 @@ public class BombScript : MonoBehaviour {
 	void Update () {
         if (timeCount <= 0f && !exploded)
         {
+            eventBombBip.stop(STOP_MODE.IMMEDIATE);
             exploded = true;
             var particle = Instantiate(explosion,transform.position,Quaternion.identity);
+            Destroy(particle, 1f);
+            Destroy(gameObject, 1f);
             mr.enabled = false;
 
             Vector3 explosionPos = transform.position;
@@ -56,7 +59,7 @@ public class BombScript : MonoBehaviour {
                 if (rigidBody != null)
                 {
                     rigidBody.AddExplosionForce(explosionForce, explosionPos, maxSize);
-                    //ExplosionSound();
+                    ExplosionSound();
                 }
             }
         }
@@ -65,8 +68,8 @@ public class BombScript : MonoBehaviour {
             int second = Mathf.FloorToInt(timeCount);
             if(second < lastTickSecond){
                 lastTickSecond = second;
-                //eventBombBip = RuntimeManager.CreateInstance(audioBombBip);
-                //eventBombBip.start();
+                eventBombBip = RuntimeManager.CreateInstance(audioBombBip);
+                eventBombBip.start();
                 Debug.Log(timeCount);
             }
             timeCount -= Time.deltaTime;

@@ -3188,7 +3188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 1245268645}
-  bomb: {fileID: 1869456172874448, guid: 6aed476e020594284b7b0e55ce038007, type: 2}
+  bomb: {fileID: 1843512426003846, guid: da7e3999f81724e139d747cfeb3366cc, type: 2}
 --- !u!1 &1455978050
 GameObject:
   m_ObjectHideFlags: 0
