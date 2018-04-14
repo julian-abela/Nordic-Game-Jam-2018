@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 33859427900238108}
   - component: {fileID: 135210908859187166}
   - component: {fileID: 23825827324221370}
-  - component: {fileID: 114242812696112044}
   - component: {fileID: 54972705653176342}
+  - component: {fileID: 114774368226720722}
   m_Layer: 0
   m_Name: Baseball
   m_TagString: Untagged
@@ -100,7 +100,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!114 &114242812696112044
+--- !u!114 &114774368226720722
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -108,13 +108,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1065515150919750}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d55c42cec354ef4ea1e51734c7e2da0, type: 3}
+  m_Script: {fileID: 11500000, guid: f6aca8866b61f254a8a07469abf718d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  controlSpeed: 10
-  fireSpeed: 1000
-  weaponType: 0
+  fireSpeed: 50
 --- !u!135 &135210908859187166
 SphereCollider:
   m_ObjectHideFlags: 1
