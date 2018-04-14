@@ -47,8 +47,7 @@ public class Projectile : MonoBehaviour
             {
                 case Weapon.Baseball:
                     GetComponent<Rigidbody>().useGravity = true;
-                    //GetComponent<Rigidbody>().AddForce((transform.forward * fireSpeed + transform.up * fireSpeed / 8), ForceMode.Impulse);
-                    GetComponent<TruckScript>().DriveTruck();
+                    GetComponent<Rigidbody>().AddForce((transform.forward * fireSpeed + transform.up * fireSpeed / 8), ForceMode.Impulse);
                     break;
                 case Weapon.Missile:
                     GetComponent<Rigidbody>().AddForce(transform.forward * fireSpeed, ForceMode.Force);
