@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CanvasScore : MonoBehaviour {
@@ -15,6 +16,12 @@ public class CanvasScore : MonoBehaviour {
     {
         instance = this;
         scores = new Dictionary<PlayerScore.PlayerNr, PlayerScore>();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.R))
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     void Start () {
