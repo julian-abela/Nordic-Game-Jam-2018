@@ -16,13 +16,14 @@ public class ScoreDestructableComponent : MonoBehaviour
             if (ownerComponent != null)
             {
                 owner = ownerComponent.houseOwner;
-                return;
+                break;
             }
             else
             {
                 tr = tr.parent;
             }
         }
+        CanvasScore.instance.Register(owner, type);
     }
 
     private void OnCollisionEnter(Collision collision)
