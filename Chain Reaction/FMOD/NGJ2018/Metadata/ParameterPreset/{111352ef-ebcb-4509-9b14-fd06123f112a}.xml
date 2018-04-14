@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{111352ef-ebcb-4509-9b14-fd06123f112a}">
+        <property name="name">
+            <value>Missile</value>
+        </property>
+        <relationship name="folder">
+            <destination>{c999f3a0-3074-4bbf-952c-1f05d63a67e8}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{512f07c4-c84c-4e33-a495-dc79e8295e95}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{512f07c4-c84c-4e33-a495-dc79e8295e95}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>

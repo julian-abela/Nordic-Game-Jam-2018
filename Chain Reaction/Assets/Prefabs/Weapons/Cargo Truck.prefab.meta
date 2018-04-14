@@ -1,10 +1,19 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Chain Reaction/Assets/Prefabs/Weapons/Cargo Truck.prefab.meta
 guid: b992b581f88e7fd429d19c66b00ddd62
 timeCreated: 1523734373
 licenseType: Free
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 0
+=======
+guid: 16847d877742a413ba4fe1b85e6f437d
+timeCreated: 1523730763
+licenseType: Free
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+>>>>>>> de9490f9fbeb1cdb010ad827b243325bd7eb84ce:Chain Reaction/Assets/Prefabs/Weapons/Cargo Truck.prefab.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 

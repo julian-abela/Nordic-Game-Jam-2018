@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{c328c8f4-df01-4535-a081-7608853e4e0a}">
+        <property name="name">
+            <value>Truck_Crash</value>
+        </property>
+        <relationship name="folder">
+            <destination>{c999f3a0-3074-4bbf-952c-1f05d63a67e8}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{f1167e83-5ef9-4e53-81ee-a51284cc6fbb}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{f1167e83-5ef9-4e53-81ee-a51284cc6fbb}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>
