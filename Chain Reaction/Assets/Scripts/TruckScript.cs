@@ -7,20 +7,28 @@ using FMOD.Studio;
 public class TruckScript : MonoBehaviour {
 
     public float speed = 100f;
-    //Audio
-    [EventRef]
-    public string audioStart;
-
-    EventInstance eventStart;
 
     private Rigidbody rb;
     private bool fired;
     private bool isOnFloor;
 
+
+    //Audio
+    [EventRef]
+    public string audioStart;
+
+    EventInstance eventStart;
+    ParameterInstance truckDrive;
+    ParameterInstance truckCrash;
+
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
+
         eventStart = RuntimeManager.CreateInstance(audioStart);
+        RuntimeManager.AttachInstanceToGameObject(eventStart, transform, GetComponent<Rigidbody>());
+        eventStart.getParameter("Truck_drive", out truckDrive);
+        eventStart.getParameter("Truck_crash", out truckCrash);
         eventStart.start();
 	}
 	
@@ -28,7 +36,7 @@ public class TruckScript : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Space) && isOnFloor)
         {
-            eventStart.setPitch(1.5f);
+            truckDrive.setValue(1f);
             fired = true;
         }
 
@@ -43,6 +51,8 @@ public class TruckScript : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
+        truckCrash.setValue(1f);
+
         if(collision.gameObject.CompareTag("Floor")) {
             isOnFloor = true;
         }
