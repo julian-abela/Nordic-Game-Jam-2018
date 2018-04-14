@@ -1,21 +1,38 @@
 fileFormatVersion: 2
-guid: 34222276080753e4c8d94cd731c111ea
-timeCreated: 1523729322
+guid: 26b5128d9345fb946a284f2a1ed80630
+timeCreated: 1523731373
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Cube
+    100004: Cube.001
+    100006: Tire
+    100008: Tire.001
     400000: //RootNode
-    2100000: Material
-    2100002: Material.003
-    2100004: Material.005
-    2100006: Material.004
-    2100008: Material.001
-    2100010: Material.002
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Cube
+    400002: Cube
+    400004: Cube.001
+    400006: Tire
+    400008: Tire.001
+    2100000: Material.003
+    2100002: Material.001
+    2100004: Material.002
+    2100006: Material
+    2100008: Material.005
+    2100010: Material.004
+    2300000: Cube
+    2300002: Cube.001
+    2300004: Tire
+    2300006: Tire.001
+    3300000: Cube
+    3300002: Cube.001
+    3300004: Tire
+    3300006: Tire.001
+    4300000: Cube.001
+    4300002: Tire.001
+    4300004: Tire
+    4300006: Cube
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -68,7 +85,7 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 1
+    normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1
