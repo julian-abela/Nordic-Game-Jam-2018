@@ -158,3 +158,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10000
+  audioStart: event:/Truck
