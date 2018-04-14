@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{30cf8f27-c89f-498d-82ff-fb8f68d90beb}">
+        <property name="assetPath">
+            <value>Champagne_Cork_Pop_Fienup_001.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>96</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>0.14933333333333335</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{eff0dd9d-5f78-4dd0-8fde-cbde613f0456}</destination>
+        </relationship>
+    </object>
+</objects>
