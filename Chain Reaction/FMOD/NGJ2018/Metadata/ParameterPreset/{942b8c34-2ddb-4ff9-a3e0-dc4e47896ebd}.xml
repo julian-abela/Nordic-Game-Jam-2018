@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{942b8c34-2ddb-4ff9-a3e0-dc4e47896ebd}">
+        <property name="name">
+            <value>Pitch</value>
+        </property>
+        <relationship name="folder">
+            <destination>{c999f3a0-3074-4bbf-952c-1f05d63a67e8}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{2c69fa0d-d77f-4cac-b49c-91881152a4c8}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{2c69fa0d-d77f-4cac-b49c-91881152a4c8}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+        <property name="seekSpeed">
+            <value>0.4100000262260437</value>
+        </property>
+    </object>
+</objects>
