@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4424903123156076}
   - component: {fileID: 33078360474430196}
   - component: {fileID: 23728874721414612}
+  - component: {fileID: 114389692832997214}
   m_Layer: 0
   m_Name: c4
   m_TagString: Untagged
@@ -86,3 +87,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1843512426003846}
   m_Mesh: {fileID: 4300000, guid: a8f1f47fffc5d402086ad9b8d200ae65, type: 3}
+--- !u!114 &114389692832997214
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1843512426003846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c76b0a4b51cf34d33b8cc4460b4bd65e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 1189230272424950, guid: 24c6525402f4c46baa7978ac0a9bacc7, type: 2}
+  explosionForce: 40000
+  maxSize: 2
+  timer: 2
+  audioBombBip: 
+  audioExplosion: 
