@@ -14,17 +14,20 @@ public class WeaponController : MonoBehaviour {
     public GameObject carPrefab;
 
     private GameObject currentWeapon;
-    private Weapon currentWeaponType;
+    private bool cameraLocked = false;
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (!cameraLocked)
         {
-            transform.RotateAround(lookTarget, -Vector3.up, Time.deltaTime * rotationSpeed);
-        }
-        else if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.RotateAround(lookTarget, Vector3.up, Time.deltaTime * rotationSpeed);
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                transform.RotateAround(lookTarget, -Vector3.up, Time.deltaTime * rotationSpeed);
+            }
+            else if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                transform.RotateAround(lookTarget, Vector3.up, Time.deltaTime * rotationSpeed);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -47,28 +50,27 @@ public class WeaponController : MonoBehaviour {
 
     void ChangeCurrentWeapon(Weapon weaponType)
     {
-        if (currentWeaponType != weaponType)
-        {
-            if (currentWeapon != null)
-            {
-                Destroy(currentWeapon);
-            }
+        //cameraLocked = true;
 
-            switch (weaponType)
-            {
-                case Weapon.Baseball:
-                    currentWeapon = Instantiate(baseballPrefab, Vector3.MoveTowards(transform.position, lookTarget, spawnDistance), transform.rotation);
-                    break;
-                case Weapon.Missile:
-                    currentWeapon = Instantiate(missilePrefab, Vector3.MoveTowards(transform.position, lookTarget, spawnDistance), transform.rotation);
-                    break;
-                case Weapon.BowlingBall:
-                    currentWeapon = Instantiate(bowlingBallPrefab, Vector3.MoveTowards(transform.position, lookTarget, spawnDistance*2), transform.rotation);
-                    break;
-                case Weapon.Car:
-                    currentWeapon = Instantiate(carPrefab, Vector3.MoveTowards(transform.position, lookTarget, spawnDistance), transform.rotation);
-                    break;
-            }
+        if (currentWeapon != null)
+        {
+            Destroy(currentWeapon);
+        }
+
+        switch (weaponType)
+        {
+            case Weapon.Baseball:
+                currentWeapon = Instantiate(baseballPrefab, Vector3.MoveTowards(transform.position, lookTarget, spawnDistance), transform.rotation);
+                break;
+            case Weapon.Missile:
+                currentWeapon = Instantiate(missilePrefab, Vector3.MoveTowards(transform.position, lookTarget, spawnDistance), transform.rotation);
+                break;
+            case Weapon.BowlingBall:
+                currentWeapon = Instantiate(bowlingBallPrefab, Vector3.MoveTowards(transform.position, lookTarget, spawnDistance*2), transform.rotation);
+                break;
+            case Weapon.Car:
+                currentWeapon = Instantiate(carPrefab, Vector3.MoveTowards(transform.position, lookTarget, spawnDistance), transform.rotation);
+                break;
         }
     }
 }
