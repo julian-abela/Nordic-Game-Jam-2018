@@ -47,29 +47,26 @@ public class WeaponController : MonoBehaviour {
 
     void ChangeCurrentWeapon(Weapon weaponType)
     {
-        if (currentWeaponType != weaponType)
+        if (currentWeapon != null)
         {
-            if (currentWeapon != null)
-            {
-                Destroy(currentWeapon);
-            }
+            Destroy(currentWeapon);
+        }
 
-            switch (weaponType)
-            {
-                case Weapon.Baseball:
-                    currentWeapon = Instantiate(baseballPrefab, Vector3.MoveTowards(transform.position, lookTarget, spawnDistance), transform.rotation);
-                    break;
-                case Weapon.Missile:
-                    currentWeapon = Instantiate(missilePrefab, Vector3.MoveTowards(transform.position, lookTarget, spawnDistance), transform.rotation);
-                    break;
-                case Weapon.BowlingBall:
-                    currentWeapon = Instantiate(bowlingBallPrefab, Vector3.MoveTowards(transform.position, lookTarget, spawnDistance*2), transform.rotation);
-                    break;
-                case Weapon.Car:
-                    currentWeapon = Instantiate(carPrefab, Vector3.MoveTowards(transform.position, lookTarget, spawnDistance), Quaternion.Euler(new Vector3(transform.rotation.x+180,transform.rotation.y+90,transform.rotation.z)));
-                    currentWeapon.transform.LookAt(lookTarget);
-                    break;
-            }
+        switch (weaponType)
+        {
+            case Weapon.Baseball:
+                currentWeapon = Instantiate(baseballPrefab, Vector3.MoveTowards(transform.position, lookTarget - new Vector3(0, 20, 0), spawnDistance), transform.rotation);
+                break;
+            case Weapon.Missile:
+                currentWeapon = Instantiate(missilePrefab, Vector3.MoveTowards(transform.position, lookTarget, spawnDistance), transform.rotation);
+                break;
+            case Weapon.BowlingBall:
+                currentWeapon = Instantiate(bowlingBallPrefab, Vector3.MoveTowards(transform.position, lookTarget, spawnDistance * 2), transform.rotation);
+                break;
+            case Weapon.Car:
+                currentWeapon = Instantiate(carPrefab, Vector3.MoveTowards(transform.position, lookTarget, spawnDistance), Quaternion.Euler(new Vector3(transform.rotation.x + 180, transform.rotation.y + 90, transform.rotation.z)));
+                currentWeapon.transform.LookAt(lookTarget);
+                break;
         }
     }
 }
