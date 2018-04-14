@@ -1,10 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
+using FMOD.Studio;
 
 public class TruckScript : MonoBehaviour {
 
     public float speed = 100f;
+    //Audio
+    [EventRef]
+    public string audioStart;
+
+    EventInstance eventStart;
 
     private Rigidbody rb;
     private bool fired;
@@ -13,12 +20,15 @@ public class TruckScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
+        eventStart = RuntimeManager.CreateInstance(audioStart);
+        eventStart.start();
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Space) && isOnFloor)
         {
+            eventStart.setPitch(1.5f);
             fired = true;
         }
 
@@ -36,5 +46,10 @@ public class TruckScript : MonoBehaviour {
         if(collision.gameObject.CompareTag("Floor")) {
             isOnFloor = true;
         }
+    }
+
+    private void OnDestroy()
+    {
+        eventStart.stop(STOP_MODE.IMMEDIATE);
     }
 }
