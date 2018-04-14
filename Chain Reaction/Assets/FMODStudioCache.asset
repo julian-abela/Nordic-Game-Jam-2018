@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114210996783698964}
-  - {fileID: 114462662033420936}
+  - {fileID: 114996495442457590}
   EditorEvents:
   - {fileID: 114846955184442682}
   - {fileID: 114969004767492872}
@@ -23,9 +23,9 @@ MonoBehaviour:
   - {fileID: 114071535942117054}
   - {fileID: 114345041906586296}
   - {fileID: 114495721149317514}
-  MasterBankRef: {fileID: 114462662033420936}
+  MasterBankRef: {fileID: 114996495442457590}
   StringsBankRef: {fileID: 114210996783698964}
-  stringsBankWriteTime: 636593382976583203
+  stringsBankWriteTime: 636593381876183554
   cacheVersion: 2
 --- !u!114 &114071535942117054
 MonoBehaviour:
@@ -41,7 +41,7 @@ MonoBehaviour:
   Path: event:/Anvil
   guid: 6dff609d91bd5d4ba1589a7079522904
   Banks:
-  - {fileID: 114462662033420936}
+  - {fileID: 114996495442457590}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -49,6 +49,21 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3000
+--- !u!114 &114108474080699818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Truck_drive
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114114415848033994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD/NGJ2018\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636593382976583203
+  lastModified: 636593381876183554
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -186,14 +201,14 @@ MonoBehaviour:
   Path: event:/Missile
   guid: 0b65c9d8e4e4fc458e1a49ffafe54ea1
   Banks:
-  - {fileID: 114462662033420936}
+  - {fileID: 114996495442457590}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 114163684017115292}
+  - {fileID: 114904939317544982}
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 100
   Length: 26969
 --- !u!114 &114290450861576004
 MonoBehaviour:
@@ -209,14 +224,15 @@ MonoBehaviour:
   Path: event:/Baseball
   guid: 10a6821e5b9bdf4b863ceca234b118e8
   Banks:
-  - {fileID: 114462662033420936}
+  - {fileID: 114996495442457590}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 114838949425937274}
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 8000
 --- !u!114 &114308448014298538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,7 +262,7 @@ MonoBehaviour:
   Path: event:/Debris
   guid: 8ff37df0a0b4b946ac5eb8db471e9103
   Banks:
-  - {fileID: 114462662033420936}
+  - {fileID: 114996495442457590}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -295,6 +311,21 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3718
+--- !u!114 &114419723694986092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Truck_Crash
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114429516096504316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,14 +378,14 @@ MonoBehaviour:
   Path: event:/Music
   guid: 9c256345cdb21c43860c10a761a0b98f
   Banks:
-  - {fileID: 114462662033420936}
-  IsStream: 0
+  - {fileID: 114996495442457590}
+  IsStream: 1
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 27428
 --- !u!114 &114507338836986406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -410,15 +441,15 @@ MonoBehaviour:
   Path: event:/Truck
   guid: 292b53b9762d9f4994b05a64ef0ddbd0
   Banks:
-  - {fileID: 114462662033420936}
+  - {fileID: 114996495442457590}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 114846504824096396}
-  - {fileID: 114697577875394676}
-  MinDistance: 0
-  MaxDistance: 0
+  - {fileID: 114108474080699818}
+  - {fileID: 114419723694986092}
+  MinDistance: 1
+  MaxDistance: 100
   Length: 12857
 --- !u!114 &114697577875394676
 MonoBehaviour:
@@ -432,6 +463,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Crash
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114838949425937274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Baseball
   Min: 0
   Max: 1
   Default: 0
@@ -464,7 +510,7 @@ MonoBehaviour:
   Path: event:/Bomb_bip
   guid: 34eb319ecea80641a26ce73ea5cd4178
   Banks:
-  - {fileID: 114462662033420936}
+  - {fileID: 114996495442457590}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -472,6 +518,21 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 428
+--- !u!114 &114904939317544982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Missile
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114969004767492872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -486,7 +547,7 @@ MonoBehaviour:
   Path: event:/Explosion
   guid: 796c9c6da602a94ea5ff48437455a2e4
   Banks:
-  - {fileID: 114462662033420936}
+  - {fileID: 114996495442457590}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -494,3 +555,22 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3718
+--- !u!114 &114996495442457590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Downloads\Game Development\Nordic Game Jam 2018\Chain Reaction\FMOD\NGJ2018\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636593448828713316
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 826176
+  Exists: 1
