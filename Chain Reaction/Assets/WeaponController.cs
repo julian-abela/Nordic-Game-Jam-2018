@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class WeaponController : MonoBehaviour {
+    public static WeaponController instance;
 
     public float rotationSpeed = 100;
     public Vector3 lookTarget = Vector3.zero;
@@ -17,16 +19,17 @@ public class WeaponController : MonoBehaviour {
     private GameObject currentWeapon;
     private Weapon currentWeaponType;
 
+    public bool cameraLocked;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     void Update()
     {
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
-        {
-            transform.RotateAround(lookTarget, -Vector3.up, Time.deltaTime * rotationSpeed);
-        }
-        else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
-        {
-            transform.RotateAround(lookTarget, Vector3.up, Time.deltaTime * rotationSpeed);
-        }
+        if(!cameraLocked)
+            HorizontalMovementUpdate();
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -50,8 +53,21 @@ public class WeaponController : MonoBehaviour {
         }
     }
 
+    private void HorizontalMovementUpdate()
+    {
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+        {
+            transform.RotateAround(lookTarget, -Vector3.up, Time.deltaTime * rotationSpeed);
+        }
+        else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        {
+            transform.RotateAround(lookTarget, Vector3.up, Time.deltaTime * rotationSpeed);
+        }
+    }
+
     void ChangeCurrentWeapon(Weapon weaponType)
     {
+        cameraLocked = true;
         if (currentWeapon != null)
         {
             Destroy(currentWeapon);
