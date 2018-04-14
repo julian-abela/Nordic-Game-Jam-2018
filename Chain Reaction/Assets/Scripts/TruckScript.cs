@@ -51,10 +51,13 @@ public class TruckScript : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        truckCrash.setValue(1f);
 
         if(collision.gameObject.CompareTag("Floor")) {
             isOnFloor = true;
+        } 
+        else 
+        {
+            truckCrash.setValue(1f);
         }
     }
 
