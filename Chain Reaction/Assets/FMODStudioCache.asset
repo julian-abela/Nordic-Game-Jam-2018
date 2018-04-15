@@ -24,9 +24,10 @@ MonoBehaviour:
   - {fileID: 114088316707791998}
   - {fileID: 114565119686866512}
   - {fileID: 114764887043273186}
+  - {fileID: 114100320378010862}
   MasterBankRef: {fileID: 114076178287807450}
   StringsBankRef: {fileID: 114263933648767578}
-  stringsBankWriteTime: 636593881130000000
+  stringsBankWriteTime: 636593903960000000
   cacheVersion: 2
 --- !u!114 &114060414244068664
 MonoBehaviour:
@@ -47,8 +48,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 114993235028014668}
-  - {fileID: 114402208090855794}
+  - {fileID: 114322043946730972}
+  - {fileID: 114462010883053692}
   MinDistance: 1
   MaxDistance: 100
   Length: 12857
@@ -95,11 +96,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: /Users/madsr/Documents/GitHub/Nordic-Game-Jam-2018/Chain Reaction/FMOD/NGJ2018/Build/Desktop/Master
     Bank.bank
-  lastModified: 636593881130000000
+  lastModified: 636593903960000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 837088
+    Value: 838912
   Exists: 1
 --- !u!114 &114077547770686748
 MonoBehaviour:
@@ -138,6 +139,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 149
+--- !u!114 &114100320378010862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Weapons
+  guid: e3953dbe885c4e43a85ed8dd456f6956
+  Banks:
+  - {fileID: 114076178287807450}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &114111791234951718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,11 +248,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD/NGJ2018/Build/Desktop/Master Bank.strings.bank
-  lastModified: 636593881130000000
+  lastModified: 636593903960000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1050
+    Value: 1204
   Exists: 1
 --- !u!114 &114266424101468404
 MonoBehaviour:
@@ -268,6 +291,21 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3718
+--- !u!114 &114322043946730972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Truck_drive
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114366608446886212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,6 +403,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114462010883053692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Truck_Crash
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114522445313584680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,7 +437,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114972094590264938}
+  - {fileID: 114885833572894778}
   MinDistance: 0
   MaxDistance: 0
   Length: 26969
@@ -527,6 +580,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Truck_Crash
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114619244111973220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Baseball
   Min: 0
   Max: 1
   Default: 0
@@ -679,6 +747,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114885833572894778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Missile
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114909802203825630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -698,7 +781,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114972496514073540}
+  - {fileID: 114619244111973220}
   MinDistance: 0
   MaxDistance: 0
   Length: 8500
