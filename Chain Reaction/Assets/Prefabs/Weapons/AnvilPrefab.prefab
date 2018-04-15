@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4371046903760492}
   - component: {fileID: 54359324314034436}
   - component: {fileID: 114726741922823132}
-  - component: {fileID: 65239522005358458}
+  - component: {fileID: 65890882084740398}
   m_Layer: 0
   m_Name: AnvilPrefab
   m_TagString: Untagged
@@ -95,7 +95,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1426432316725420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.872299, y: 7.14, z: -13.581522}
+  m_LocalPosition: {x: -11.04226, y: 8.679112, z: -2.9177327}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4124099934639278}
@@ -151,7 +151,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1426432316725420}
   serializedVersion: 2
-  m_Mass: 1000
+  m_Mass: 500
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -159,7 +159,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!65 &65239522005358458
+--- !u!65 &65890882084740398
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -169,8 +169,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.03840973, y: 0.02330178, z: 0.017217001}
-  m_Center: {x: 0.004697245, y: 0.00006603226, z: -0.0013915007}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!108 &108470869537055726
 Light:
   m_ObjectHideFlags: 1
