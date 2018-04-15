@@ -158,4 +158,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30000
+  explosionStrength: 3200
+  explosionRadius: 3
+  explosionPrefab: {fileID: 1189230272424950, guid: 24c6525402f4c46baa7978ac0a9bacc7,
+    type: 2}
   audioStart: event:/Truck
