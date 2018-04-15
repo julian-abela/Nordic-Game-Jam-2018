@@ -1,14 +1,19 @@
 [LOG] System::create                           : Header version = 1.10.04. Current version = 1.10.04.
-[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
-[LOG] Manager::init                            : maxchannels = 1024 studioflags = 00000008 flags 00000000 extradriverdata 0000000000000000.
+[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD Core Audio Output'
+[LOG] Manager::init                            : maxchannels = 1024 studioflags = 00000008 flags 00000000 extradriverdata 0x0.
 [LOG] SystemI::init                            : Initialize version=11004 (93853), maxchannels=1024, flags=0x00020000
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
-[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
+[LOG] OutputCoreAudio::enumerate               : Enumerating...
+[LOG] OutputCoreAudio::enumerate               : Found output driver: "Built-in Output".
+[LOG] OutputCoreAudio::enumerate               : Found output driver: "Soundflower (2ch)".
+[LOG] OutputCoreAudio::enumerate               : Found output driver: "Soundflower (64ch)".
+[LOG] OutputCoreAudio::enumerate               : Found output driver: "Pro Tools Aggregate I/O".
+[LOG] OutputCoreAudio::enumerate               : Done.
+[LOG] OutputCoreAudio::init                    : Output running 2 channels at 48000Hz sample rate.
+[LOG] OutputCoreAudio::init                    : Maximum hardware read size: 1024 samples, Software buffer size: 512 samples, Number of software buffers: 4.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 00000000453B51B8 isAsync 1 updatePeriod 0.02
+[LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] AsyncManager::init                       : manager 0x14044ae08 isAsync 1 updatePeriod 0.02
 [LOG] Thread::initThread                       : Init FMOD Studio update thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
@@ -19,84 +24,282 @@
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] SystemI::createSound                     : filename = FMOD\NGJ2018\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : filename = FMOD/NGJ2018/Build/Desktop/Master Bank.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000000193FF888 : node = 00000000193FBFC0
-[LOG] SystemI::createSound                     : add node to async list : head = 000000003EB42728.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000193FF888
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD\NGJ2018\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSound                     : setdata soundi = 0x113231348 : node = 0x113231500
+[LOG] SystemI::createSound                     : add node to async list : head = 0x10e33f308.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x113231348
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/NGJ2018/Build/Desktop/Master Bank.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 809440
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 27872
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 27616
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000193FC0D8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x113231618
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Create name='', mode=0x02000202
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 809440
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 27872
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 27616
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006276F5FC
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7000082f57bc
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->useropen           = 00007FF96A8DE310
-[LOG] SystemI::createSoundInternal             :     exinfo->userclose          = 00007FF96A8DE2E0
-[LOG] SystemI::createSoundInternal             :     exinfo->userread           = 00007FF96A8DE3E0
-[LOG] SystemI::createSoundInternal             :     exinfo->userseek           = 00007FF96A8DE490
-[LOG] SystemI::createSoundInternal             :     exinfo->fileuserdata       = 000000004595D5E8
+[LOG] SystemI::createSoundInternal             :     exinfo->useropen           = 0x160ac5993
+[LOG] SystemI::createSoundInternal             :     exinfo->userclose          = 0x160ac5a4f
+[LOG] SystemI::createSoundInternal             :     exinfo->userread           = 0x160ac5a7f
+[LOG] SystemI::createSoundInternal             :     exinfo->userseek           = 0x160ac5b1c
+[LOG] SystemI::createSoundInternal             :     exinfo->fileuserdata       = 0x15db14b18
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            :     register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             :     Sample 0/1: name='Point', format=2, channels=2, frequency=48000, lengthbytes=8000, lengthpcm=43633, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999900.
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='NGJ2018 - Battle music', format=2, channels=2, frequency=48000, lengthbytes=368064, lengthpcm=1316572, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.527264.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000193FF888
-[LOG] SoundI::getSubSound                      : sound 00000000193FF888.  Subsound index 0 / 1
-[LOG] SystemI::createSound                     : filename = FMOD\NGJ2018\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x113231348
+[LOG] SoundI::getSubSound                      : sound 0x113231348.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 809440
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 27616
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000082f57bc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x160ac5993
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x160ac5a4f
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x160ac5a7f
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x160ac5b1c
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x13fad3318
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Anvil', format=2, channels=2, frequency=48000, lengthbytes=35296, lengthpcm=329143, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.622341.
+[LOG] SystemI::createSound                     : filename = FMOD/NGJ2018/Build/Desktop/Master Bank.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000000193FFA38 : node = 00000000193FA6D0
-[LOG] SystemI::createSound                     : add node to async list : head = 000000003EB42728.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000193FFA38
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD\NGJ2018\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSound                     : setdata soundi = 0x127203d98 : node = 0x127206720
+[LOG] SystemI::createSound                     : add node to async list : head = 0x10e33f308.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x127203d98
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/NGJ2018/Build/Desktop/Master Bank.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 809440
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 27872
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 27616
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000193FA7E8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x127206838
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Missile_fire', format=2, channels=2, frequency=48000, lengthbytes=120320, lengthpcm=718514, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.284615.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000193FFA38
-[LOG] SoundI::getSubSound                      : sound 00000000193FFA38.  Subsound index 0 / 1
-[LOG] SystemI::createSound                     : filename = FMOD\NGJ2018\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x127203d98
+[LOG] SoundI::getSubSound                      : sound 0x127203d98.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = FMOD/NGJ2018/Build/Desktop/Master Bank.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000006C702748 : node = 00000000193FBBD0
-[LOG] SystemI::createSound                     : add node to async list : head = 000000003EB42728.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000006C702748
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD\NGJ2018\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSound                     : setdata soundi = 0x15dba4608 : node = 0x10e3db830
+[LOG] SystemI::createSound                     : add node to async list : head = 0x10e33f308.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x15dba4608
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/NGJ2018/Build/Desktop/Master Bank.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 809440
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 27872
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 27616
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000193FBCE8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x10e3db948
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Missile_impact', format=2, channels=2, frequency=48000, lengthbytes=43776, lengthpcm=718514, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.627006.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000006C702748
-[LOG] SoundI::getSubSound                      : sound 000000006C702748.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Missile_fire (00000000193FFA38)
-[LOG] SoundI::release                          :     Missile_fire (000000004A8754D8)
-[LOG] SoundI::release                          :     Missile_fire (000000006C701ED8)
-[LOG] SoundI::release                          : NGJ2018 - Battle music (00000000193FF888)
-[LOG] SoundI::release                          :     NGJ2018 - Battle music (000000004A874498)
-[LOG] SoundI::release                          :     NGJ2018 - Battle music (00000000193FFBE8)
-[LOG] SoundI::release                          : Missile_impact (000000006C702748)
-[LOG] SoundI::release                          :     Missile_impact (000000004A875678)
-[LOG] SoundI::release                          :     Missile_impact (000000006C702238)
-[LOG] SoundI::release                          :  (000000004A7C0BF8)
-[LOG] SoundI::release                          :     Point (000000004A875CF8)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x15dba4608
+[LOG] SoundI::getSubSound                      : sound 0x15dba4608.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Missile_fire (0x127203d98)
+[LOG] SoundI::release                          :     Missile_fire (0x13fad2058)
+[LOG] SoundI::release                          :     Missile_fire (0x13fad21e8)
+[LOG] SystemI::createSound                     : filename = FMOD/NGJ2018/Build/Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x13facea78 : node = 0x13facec30
+[LOG] SystemI::createSound                     : add node to async list : head = 0x10e33f308.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x13facea78
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/NGJ2018/Build/Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 809440
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 27616
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x13faced48
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Missile_fire', format=2, channels=2, frequency=48000, lengthbytes=120320, lengthpcm=718514, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.284615.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x13facea78
+[LOG] SoundI::getSubSound                      : sound 0x13facea78.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = FMOD/NGJ2018/Build/Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x127205c58 : node = 0x1272b84b0
+[LOG] SystemI::createSound                     : add node to async list : head = 0x10e33f308.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x127205c58
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/NGJ2018/Build/Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 809440
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 27616
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x1272b85c8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Missile_impact', format=2, channels=2, frequency=48000, lengthbytes=43776, lengthpcm=718514, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.627006.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x127205c58
+[LOG] SoundI::getSubSound                      : sound 0x127205c58.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Missile_fire (0x13facea78)
+[LOG] SoundI::release                          :     Missile_fire (0x15dbc0a98)
+[LOG] SoundI::release                          :     Missile_fire (0x15dbc0c28)
+[LOG] SystemI::createSound                     : filename = FMOD/NGJ2018/Build/Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x13facf438 : node = 0x13facf5f0
+[LOG] SystemI::createSound                     : add node to async list : head = 0x10e33f308.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x13facf438
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/NGJ2018/Build/Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 809440
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 27616
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x13facf708
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='NGJ2018 - Battle music', format=2, channels=2, frequency=48000, lengthbytes=368064, lengthpcm=1316572, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.527264.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x13facf438
+[LOG] SoundI::getSubSound                      : sound 0x13facf438.  Subsound index 0 / 1
+[LOG] SoundI::release                          : NGJ2018 - Battle music (0x113231348)
+[LOG] SoundI::release                          :     NGJ2018 - Battle music (0x141f388c8)
+[LOG] SoundI::release                          :     NGJ2018 - Battle music (0x141aa0ee8)
+[LOG] SystemI::createSound                     : filename = FMOD/NGJ2018/Build/Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x13face218 : node = 0x13face3d0
+[LOG] SystemI::createSound                     : add node to async list : head = 0x10e33f308.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x13face218
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/NGJ2018/Build/Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 809440
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 27616
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x13face4e8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Missile_fire', format=2, channels=2, frequency=48000, lengthbytes=120320, lengthpcm=718514, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.284615.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x13face218
+[LOG] SoundI::getSubSound                      : sound 0x13face218.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = FMOD/NGJ2018/Build/Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x111789fc8 : node = 0x1117845e0
+[LOG] SystemI::createSound                     : add node to async list : head = 0x10e33f308.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x111789fc8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/NGJ2018/Build/Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 809440
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 27616
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x1117846f8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Missile_impact', format=2, channels=2, frequency=48000, lengthbytes=43776, lengthpcm=718514, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.627006.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x111789fc8
+[LOG] SoundI::getSubSound                      : sound 0x111789fc8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Missile_fire (0x13face218)
+[LOG] SoundI::release                          :     Missile_fire (0x15dbc0778)
+[LOG] SoundI::release                          :     Missile_fire (0x15dbc0908)
+[LOG] SystemI::createSound                     : filename = FMOD/NGJ2018/Build/Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x10e3da6c8 : node = 0x15db28ee0
+[LOG] SystemI::createSound                     : add node to async list : head = 0x10e33f308.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x10e3da6c8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/NGJ2018/Build/Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 809440
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 27616
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x15db28ff8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Missile_fire', format=2, channels=2, frequency=48000, lengthbytes=120320, lengthpcm=718514, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.284615.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x10e3da6c8
+[LOG] SystemI::createSound                     : filename = FMOD/NGJ2018/Build/Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x15db48848 : node = 0x15db48a00
+[LOG] SystemI::createSound                     : add node to async list : head = 0x10e33f308.  list count = 0
+[LOG] SoundI::getSubSound                      : sound 0x10e3da6c8.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x15db48848
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/NGJ2018/Build/Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 809440
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 27616
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x15db48b18
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Missile_impact', format=2, channels=2, frequency=48000, lengthbytes=43776, lengthpcm=718514, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.627006.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x15db48848
+[LOG] SoundI::getSubSound                      : sound 0x15db48848.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Missile_fire (0x10e3da6c8)
+[LOG] SoundI::release                          :     Missile_fire (0x13fac8f18)
+[LOG] SoundI::release                          :     Missile_fire (0x13fac90a8)
+[LOG] SoundI::release                          : Missile_impact (0x15dba4608)
+[LOG] SoundI::release                          :     Missile_impact (0x141a7a198)
+[LOG] SoundI::release                          :     Missile_impact (0x141a7aa78)
+[LOG] SystemI::createSound                     : filename = FMOD/NGJ2018/Build/Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x1117e0c88 : node = 0x1117e0e40
+[LOG] SystemI::createSound                     : add node to async list : head = 0x10e33f308.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x1117e0c88
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/NGJ2018/Build/Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 809440
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 27616
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x1117e0f58
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Missile_fire', format=2, channels=2, frequency=48000, lengthbytes=120320, lengthpcm=718514, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.284615.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x1117e0c88
+[LOG] SystemI::createSound                     : filename = FMOD/NGJ2018/Build/Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x11178a378 : node = 0x141a7aaa0
+[LOG] SystemI::createSound                     : add node to async list : head = 0x10e33f308.  list count = 0
+[LOG] SoundI::getSubSound                      : sound 0x1117e0c88.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x11178a378
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/NGJ2018/Build/Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 809440
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 27616
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x141a7abb8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Missile_impact', format=2, channels=2, frequency=48000, lengthbytes=43776, lengthpcm=718514, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.627006.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x11178a378
+[LOG] SoundI::getSubSound                      : sound 0x11178a378.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Missile_fire (0x1117e0c88)
+[LOG] SoundI::release                          :     Missile_fire (0x13fac7528)
+[LOG] SoundI::release                          :     Missile_fire (0x13fac76b8)
+[LOG] SoundI::release                          : Missile_impact (0x127205c58)
+[LOG] SoundI::release                          :     Missile_impact (0x1272b45c8)
+[LOG] SoundI::release                          :     Missile_impact (0x141f8a0f8)
+[LOG] SoundI::release                          : Missile_impact (0x111789fc8)
+[LOG] SoundI::release                          :     Missile_impact (0x1272b4758)
+[LOG] SoundI::release                          :     Missile_impact (0x141f39048)
+[LOG] SoundI::release                          : Missile_impact (0x11178a378)
+[LOG] SoundI::release                          :     Missile_impact (0x13fac5538)
+[LOG] SoundI::release                          :     Missile_impact (0x13fac56c8)
+[LOG] SoundI::release                          : Missile_impact (0x15db48848)
+[LOG] SoundI::release                          :     Missile_impact (0x13fac7f78)
+[LOG] SoundI::release                          :     Missile_impact (0x13fac8108)
+[LOG] SoundI::release                          : NGJ2018 - Battle music (0x13facf438)
+[LOG] SoundI::release                          :     NGJ2018 - Battle music (0x13facb018)
+[LOG] SoundI::release                          :     NGJ2018 - Battle music (0x13facb1a8)
+[LOG] SoundI::release                          :  (0x141f38a58)
+[LOG] SoundI::release                          :     Point (0x150c217d8)
+[LOG] SoundI::release                          :  (0x10e4db7e8)
+[LOG] SoundI::release                          :     Anvil (0x10e4da718)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
