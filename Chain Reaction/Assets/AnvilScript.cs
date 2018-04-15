@@ -52,6 +52,7 @@ public class AnvilScript : MonoBehaviour {
             body.AddForce(Vector3.down * fireSpeed, ForceMode.Force);
             hasBeenUsed = true;
             WeaponController.instance.cameraLocked = false;
+            CanvasScore.instance.NextTurn();
         }
         else
         {

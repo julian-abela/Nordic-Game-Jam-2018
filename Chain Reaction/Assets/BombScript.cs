@@ -46,6 +46,7 @@ public class BombScript : MonoBehaviour {
             eventBombBip.stop(STOP_MODE.IMMEDIATE);
             ExplosionSound();
             exploded = true;
+            CanvasScore.instance.NextTurn();
             var particle = Instantiate(explosion,transform.position,Quaternion.identity);
             Destroy(particle, 1f);
             Destroy(gameObject, 2f);

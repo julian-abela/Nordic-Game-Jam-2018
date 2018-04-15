@@ -36,6 +36,7 @@ public class TruckScript : MonoBehaviour {
 	void Update () {
         if ((Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.Space)) && isOnFloor)
         {
+            CanvasScore.instance.NextTurn();
             WeaponController.instance.cameraLocked = false;
             truckDrive.setValue(1f);
             fired = true;
