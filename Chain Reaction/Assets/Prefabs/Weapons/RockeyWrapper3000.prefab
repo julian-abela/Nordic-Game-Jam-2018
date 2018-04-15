@@ -247,6 +247,7 @@ MonoBehaviour:
   explosionRadius: 5
   explosionPrefab: {fileID: 1189230272424950, guid: 24c6525402f4c46baa7978ac0a9bacc7,
     type: 2}
+  audioStart: event:/Missile
 --- !u!136 &136894577708118100
 CapsuleCollider:
   m_ObjectHideFlags: 1

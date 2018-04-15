@@ -38,7 +38,6 @@ public class AnvilScript : MonoBehaviour {
         eventStart = RuntimeManager.CreateInstance(audioStart);
 
         oneShot = true;
-
     }
 
     void Update ()

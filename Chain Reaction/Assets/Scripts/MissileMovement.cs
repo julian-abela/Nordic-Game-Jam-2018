@@ -12,7 +12,11 @@ public class MissileMovement : MonoBehaviour
     public GameObject explosionPrefab;
 
     private bool missileShot = false;
-
+    private Vector3 upEnd;
+    private Vector3 downEnd;
+    private float range = 100f;
+    private float verticalLerpValue = 0.5f;
+    private float inputSensitivity;
 
     //Audio
     [EventRef]
@@ -26,6 +30,10 @@ public class MissileMovement : MonoBehaviour
         eventStart = RuntimeManager.CreateInstance(audioStart);
         RuntimeManager.AttachInstanceToGameObject(eventStart, transform, GetComponent<Rigidbody>());
         eventStart.getParameter("Missile", out impactParam);
+        
+        inputSensitivity = 0.5f / range;
+        upEnd = transform.position + transform.up * range;
+        downEnd = transform.position + transform.up * range * -1f;
     }
 
     void Update()
@@ -38,6 +46,10 @@ public class MissileMovement : MonoBehaviour
             transform.parent = null;
             missileShot = true;
         }
+
+        //verticalLerpValue -= Input.GetAxisRaw("Vertical") * inputSensitivity;
+        //verticalLerpValue = Mathf.Max(0, Mathf.Min(verticalLerpValue, 1));
+        //transform.root.rotation = Quaternion.Euler(Vector3.Lerp(upEnd, downEnd, verticalLerpValue));
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -58,6 +70,7 @@ public class MissileMovement : MonoBehaviour
 
         var particle = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         Destroy(particle, 1f);
-        Destroy(this.gameObject, 0.05f);
+        Debug.Log(transform.root.gameObject.name);
+        Destroy(transform.root.gameObject, 0.05f);
     }
 }
