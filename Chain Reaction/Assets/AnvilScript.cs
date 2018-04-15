@@ -74,9 +74,9 @@ public class AnvilScript : MonoBehaviour {
         {
             eventStart.start();
             oneShot = false;
+            Destroy(transform.GetChild(1).gameObject);
         }
 
-        Destroy(transform.GetChild(1).gameObject);
         Destroy(this.gameObject, 2);
     }
 
