@@ -76,6 +76,7 @@ public class AnvilScript : MonoBehaviour {
             oneShot = false;
         }
 
+        Destroy(transform.GetChild(1).gameObject);
         Destroy(this.gameObject, 2);
     }
 
