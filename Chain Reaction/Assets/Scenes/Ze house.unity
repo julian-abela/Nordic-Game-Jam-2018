@@ -31407,7 +31407,7 @@ MonoBehaviour:
   rotationSpeed: 100
   lookTarget: {x: 0, y: 0, z: 0}
   spawnDistance: 10
-  baseballPrefab: {fileID: 1052960945406190, guid: e7de8af7539fe534091653eb54f6bd68,
+  baseballPrefab: {fileID: 1520693589499316, guid: 6284d120b13d1be4cbe46842c2fc04b0,
     type: 2}
   missilePrefab: {fileID: 1203833322600192, guid: 6da717466d74cb446aeb46520dd2a689,
     type: 2}
@@ -31415,6 +31415,7 @@ MonoBehaviour:
     type: 2}
   carPrefab: {fileID: 1326647121258910, guid: 994d3874e07d2421da8c662cc0b979eb, type: 2}
   c4Prefab: {fileID: 1120031771187328, guid: 77cd0b5100b30564fbf07246ecf09809, type: 2}
+  cameraLocked: 0
 --- !u!4 &2104666015 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4837397168397294, guid: dda320798b7b043449f2e2c471cf39ab,

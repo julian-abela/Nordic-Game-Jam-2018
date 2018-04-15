@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6aca8866b61f254a8a07469abf718d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireSpeed: 20
+  fireSpeed: 1500
   audioStart: event:/Baseball
 --- !u!135 &135718255045989256
 SphereCollider:

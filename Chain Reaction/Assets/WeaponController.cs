@@ -51,6 +51,16 @@ public class WeaponController : MonoBehaviour {
         {
             ChangeCurrentWeapon(Weapon.C4);
         }
+
+        switch(currentWeaponType)
+        {
+            case Weapon.Baseball:
+            case Weapon.C4:
+            case Weapon.Missile:
+                currentWeapon.transform.position = Vector3.MoveTowards(transform.position, lookTarget - new Vector3(0, 20, 0), spawnDistance);
+                currentWeapon.transform.rotation = transform.rotation;
+                break;
+        }
     }
 
     private void HorizontalMovementUpdate()
@@ -81,7 +91,7 @@ public class WeaponController : MonoBehaviour {
                 currentWeapon = Instantiate(missilePrefab, Vector3.MoveTowards(transform.position, lookTarget - new Vector3(0, 20, 0), spawnDistance), transform.rotation);
                 break;
             case Weapon.BowlingBall:
-                currentWeapon = Instantiate(bowlingBallPrefab, Vector3.MoveTowards(transform.position, lookTarget, spawnDistance * 2), transform.rotation);
+                currentWeapon = Instantiate(bowlingBallPrefab, Vector3.MoveTowards(transform.position, lookTarget + new Vector3(0, 10, 0), spawnDistance * 2), Quaternion.Euler(new Vector3(0, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z)));
                 cameraLocked = true;
                 break;
             case Weapon.Car:
@@ -93,5 +103,7 @@ public class WeaponController : MonoBehaviour {
                 currentWeapon = Instantiate(c4Prefab, Vector3.MoveTowards(transform.position, lookTarget - new Vector3(0, 20, 0), spawnDistance), transform.rotation);
                 break;
         }
+
+        currentWeaponType = weaponType;
     }
 }

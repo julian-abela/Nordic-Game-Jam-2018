@@ -34,7 +34,7 @@ public class TruckScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Space) && isOnFloor)
+        if ((Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.Space)) && isOnFloor)
         {
             WeaponController.instance.cameraLocked = false;
             truckDrive.setValue(1f);

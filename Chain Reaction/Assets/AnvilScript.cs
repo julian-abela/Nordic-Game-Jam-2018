@@ -10,8 +10,11 @@ public class AnvilScript : MonoBehaviour {
     private Rigidbody body;
     private Vector3 leftEnd;
     private Vector3 rightEnd;
+    private Vector3 upEnd;
+    private Vector3 downEnd;
     private float range = 10f;
-    private float lerpValue = .5f;
+    private float horizontalLerpValue = .5f;
+    private float verticalLerpValue = 1;
     private float inputSensitivity;
     private bool hasBeenUsed;
     private bool oneShot;
@@ -24,11 +27,13 @@ public class AnvilScript : MonoBehaviour {
 
     private void Start()
     {
-        inputSensitivity = 1f / range;
+        inputSensitivity = 0.1f / range;
         body = GetComponent<Rigidbody>();
-        transform.position += new Vector3(0,6f);
+        //transform.position += new Vector3(0,6f);
         leftEnd = transform.position + transform.right * range;
         rightEnd = transform.position + transform.right * range * -1f;
+        upEnd = transform.position + transform.forward * range;
+        downEnd = transform.position + transform.forward * range * -1f;
 
         eventStart = RuntimeManager.CreateInstance(audioStart);
 
@@ -42,7 +47,7 @@ public class AnvilScript : MonoBehaviour {
         {
             return;
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if ((Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.Space)))
         {
             body.useGravity = true;
             body.AddForce(Vector3.down * fireSpeed, ForceMode.Force);
@@ -51,9 +56,15 @@ public class AnvilScript : MonoBehaviour {
         }
         else
         {
-            lerpValue += Input.GetAxisRaw("Horizontal") * inputSensitivity;
-            lerpValue = Mathf.Max(0, Mathf.Min(lerpValue, 1));
-            transform.position = Vector3.Lerp(rightEnd, leftEnd, lerpValue);
+            horizontalLerpValue += Input.GetAxisRaw("Horizontal") * inputSensitivity;
+            horizontalLerpValue = Mathf.Max(0, Mathf.Min(horizontalLerpValue, 1));
+            Vector3 horizontalPosition = Vector3.Lerp(rightEnd, leftEnd, horizontalLerpValue);
+
+            verticalLerpValue -= Input.GetAxisRaw("Vertical") * inputSensitivity;
+            verticalLerpValue = Mathf.Max(0, Mathf.Min(verticalLerpValue, 1));
+            Vector3 verticalPosition = Vector3.Lerp(upEnd, downEnd, verticalLerpValue);
+
+            transform.position = (horizontalPosition + verticalPosition) / 2;
         }
 	}
 
@@ -65,6 +76,7 @@ public class AnvilScript : MonoBehaviour {
             oneShot = false;
         }
 
+        Destroy(this.gameObject, 2);
     }
 
 }

@@ -5,16 +5,18 @@ using UnityEngine;
 public class MissileMovement : MonoBehaviour
 {
     public float fireSpeed;
-    public float explosionStrength = 10000000000000000;
-    public float explosionRadius = 500;
+    public float explosionStrength;
+    public float explosionRadius;
+    public GameObject explosionPrefab;
 
     private bool missileShot = false;
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Mouse0) && !missileShot)
+        if ((Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.Space)) && !missileShot)
         {
             GetComponent<Rigidbody>().AddForce(transform.forward * fireSpeed, ForceMode.Force);
+            transform.parent = null;
             missileShot = true;
         }
     }
@@ -33,6 +35,8 @@ public class MissileMovement : MonoBehaviour
             }
         }
 
-        Destroy(this.gameObject, 0.1f);
+        var particle = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        Destroy(particle, 1f);
+        Destroy(this.gameObject, 0.05f);
     }
 }
