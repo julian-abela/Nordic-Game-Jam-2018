@@ -71,7 +71,6 @@ public class MissileMovement : MonoBehaviour
 
         var particle = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         Destroy(particle, 1f);
-        Debug.Log(transform.root.gameObject.name);
         Destroy(transform.root.gameObject, 0.05f);
     }
 }

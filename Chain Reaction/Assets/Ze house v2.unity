@@ -33029,51 +33029,6 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 2103837884}
-    - target: {fileID: 224135476300090600, guid: 55a0f9f8b8bbf7349b510c7c1ce4c09e,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 224135476300090600, guid: 55a0f9f8b8bbf7349b510c7c1ce4c09e,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 114898878539456432, guid: 55a0f9f8b8bbf7349b510c7c1ce4c09e,
-        type: 2}
-      propertyPath: m_FontData.m_Alignment
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114099780009906696, guid: 55a0f9f8b8bbf7349b510c7c1ce4c09e,
-        type: 2}
-      propertyPath: m_FontData.m_Alignment
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 224524676582405256, guid: 55a0f9f8b8bbf7349b510c7c1ce4c09e,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224524676582405256, guid: 55a0f9f8b8bbf7349b510c7c1ce4c09e,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224898738289654552, guid: 55a0f9f8b8bbf7349b510c7c1ce4c09e,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224898738289654552, guid: 55a0f9f8b8bbf7349b510c7c1ce4c09e,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 223991804870508584, guid: 55a0f9f8b8bbf7349b510c7c1ce4c09e,
-        type: 2}
-      propertyPath: m_PlaneDistance
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55a0f9f8b8bbf7349b510c7c1ce4c09e, type: 2}
   m_IsPrefabParent: 0
