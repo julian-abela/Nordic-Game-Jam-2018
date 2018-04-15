@@ -163,3 +163,4 @@ MonoBehaviour:
   explosionPrefab: {fileID: 1189230272424950, guid: 24c6525402f4c46baa7978ac0a9bacc7,
     type: 2}
   audioStart: event:/Truck
+  explosionStart: event:/Explosion
