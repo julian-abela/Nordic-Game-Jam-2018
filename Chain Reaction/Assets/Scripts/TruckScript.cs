@@ -19,8 +19,11 @@ public class TruckScript : MonoBehaviour {
     //Audio
     [EventRef]
     public string audioStart;
+    [EventRef]
+    public string explosionStart;
 
     EventInstance eventStart;
+    EventInstance explosionEvent;
     ParameterInstance truckDrive;
     ParameterInstance truckCrash;
 
@@ -29,6 +32,7 @@ public class TruckScript : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
 
         eventStart = RuntimeManager.CreateInstance(audioStart);
+        explosionEvent = RuntimeManager.CreateInstance(explosionStart);
         RuntimeManager.AttachInstanceToGameObject(eventStart, transform, GetComponent<Rigidbody>());
         eventStart.getParameter("Truck_drive", out truckDrive);
         eventStart.getParameter("Truck_Crash", out truckCrash);
@@ -72,6 +76,7 @@ public class TruckScript : MonoBehaviour {
     {
         yield return new WaitForSeconds(2);
 
+        explosionEvent.start();
         Vector3 explosionPos = transform.position;
         Collider[] colliders = Physics.OverlapSphere(explosionPos, explosionRadius);
         foreach (Collider hit in colliders)
