@@ -15,7 +15,9 @@ public class CanvasScore : MonoBehaviour {
     public Text[] playerTextScores;
     public Dictionary<ScoreDestructableComponent.DestructableType, int> typeToPoints;
     public Text turnText;
+    public Image turnPanelImage;
     public int playerTurn;
+    float turnAlpha;
 
     private bool playAudio;
     public float audioCooldown;
@@ -30,6 +32,7 @@ public class CanvasScore : MonoBehaviour {
 
     private void Awake()
     {
+        turnAlpha = 2f;
         instance = this;
         buildings = new Dictionary<PlayerScore.PlayerNr, PlayerScore>();
         for (int i = 0; i < playerTextScores.Length; i++)
@@ -69,6 +72,13 @@ public class CanvasScore : MonoBehaviour {
                 playAudio = true;
             }
         }
+
+        turnAlpha -= Time.deltaTime;
+        if(turnAlpha > 0)
+        {
+            turnText.color = new Color(turnText.color.r, turnText.color.g, turnText.color.b, turnAlpha);
+            turnPanelImage.color = new Color(turnPanelImage.color.r, turnPanelImage.color.g, turnPanelImage.color.b, turnAlpha);
+        }
     }
 
     internal void Register(PlayerScore.PlayerNr owner, ScoreDestructableComponent.DestructableType type)
@@ -104,6 +114,7 @@ public class CanvasScore : MonoBehaviour {
 
     private void ShowPlayerTurn()
     {
+        turnAlpha = 2f;
         turnText.text = "Player " + (playerTurn + 1);
     }
 }

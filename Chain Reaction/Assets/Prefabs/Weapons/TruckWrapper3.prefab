@@ -157,5 +157,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b929b37f6779648f08956f8b301e0607, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50000
+  speed: 30000
   audioStart: event:/Truck

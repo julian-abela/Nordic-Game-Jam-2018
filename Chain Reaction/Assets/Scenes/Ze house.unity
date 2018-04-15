@@ -25563,6 +25563,11 @@ Prefab:
       propertyPath: turnText
       value: 
       objectReference: {fileID: 861272641}
+    - target: {fileID: 114285637972674100, guid: 55a0f9f8b8bbf7349b510c7c1ce4c09e,
+        type: 2}
+      propertyPath: turnPanelImage
+      value: 
+      objectReference: {fileID: 858911219}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55a0f9f8b8bbf7349b510c7c1ce4c09e, type: 2}
   m_IsPrefabParent: 0
