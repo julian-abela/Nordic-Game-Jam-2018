@@ -31,6 +31,7 @@ public class BaseballMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Mouse0) && !ballShot)
         {
+            CanvasScore.instance.NextTurn();
             eventStart.start();
 
             RaycastHit hit;

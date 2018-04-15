@@ -14,7 +14,8 @@ public class CanvasScore : MonoBehaviour {
     public Dictionary<PlayerScore.PlayerNr, PlayerScore> buildings;
     public Text[] playerTextScores;
     public Dictionary<ScoreDestructableComponent.DestructableType, int> typeToPoints;
-
+    public Text turnText;
+    public int playerTurn;
 
     private bool playAudio;
     public float audioCooldown;
@@ -47,6 +48,11 @@ public class CanvasScore : MonoBehaviour {
         eventStart = RuntimeManager.CreateInstance(audioStart);
         playAudio = true;
         timer = audioCooldown;
+    }
+
+    internal void Initialize()
+    {
+        ShowPlayerTurn();
     }
 
     private void Update()
@@ -88,5 +94,16 @@ public class CanvasScore : MonoBehaviour {
         buildings[playerNr].score = score;
         string percentage = buildings[playerNr].MaxScore > 0 ? (100 - ((float)score / buildings[playerNr].MaxScore) * 100f).ToString("0.0") : "100";
         playerTextScores[(int)playerNr].text = playerNr + " = " + percentage + "%";
+    }
+    
+    public void NextTurn()
+    {
+        playerTurn = (playerTurn + 1) % Enum.GetValues(typeof(PlayerScore.PlayerNr)).Length;
+        ShowPlayerTurn();
+    }
+
+    private void ShowPlayerTurn()
+    {
+        turnText.text = "Player " + (playerTurn + 1);
     }
 }

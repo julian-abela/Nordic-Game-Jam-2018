@@ -28,8 +28,9 @@ public class MissileMovement : MonoBehaviour
     private void Start()
     {
         eventStart = RuntimeManager.CreateInstance(audioStart);
-        RuntimeManager.AttachInstanceToGameObject(eventStart, transform, GetComponent<Rigidbody>());
+        //RuntimeManager.AttachInstanceToGameObject(eventStart, transform, GetComponent<Rigidbody>());
         eventStart.getParameter("Missile", out impactParam);
+
         
         inputSensitivity = 0.5f / range;
         upEnd = transform.position + transform.up * range;
@@ -41,7 +42,6 @@ public class MissileMovement : MonoBehaviour
         if ((Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.Space)) && !missileShot)
         {
             eventStart.start();
-
             GetComponent<Rigidbody>().AddForce(transform.forward * fireSpeed, ForceMode.Force);
             transform.parent = null;
             missileShot = true;

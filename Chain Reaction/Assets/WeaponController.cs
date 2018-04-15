@@ -27,6 +27,11 @@ public class WeaponController : MonoBehaviour {
         instance = this;
     }
 
+    private void Start()
+    {
+        CanvasScore.instance.Initialize();
+    }
+
     void Update()
     {
         if(!cameraLocked)
@@ -90,9 +95,11 @@ public class WeaponController : MonoBehaviour {
         {
             case Weapon.Baseball:
                 currentWeapon = Instantiate(baseballPrefab, Vector3.MoveTowards(transform.position, lookTarget - new Vector3(0, 20, 0), spawnDistance), transform.rotation);
+                cameraLocked = false;
                 break;
             case Weapon.Missile:
                 currentWeapon = Instantiate(missilePrefab, Vector3.MoveTowards(transform.position, lookTarget - new Vector3(0, 20, 0), spawnDistance), transform.rotation);
+                cameraLocked = false;
                 break;
             case Weapon.BowlingBall:
                 currentWeapon = Instantiate(bowlingBallPrefab, Vector3.MoveTowards(transform.position, lookTarget + new Vector3(0, 10, 0), spawnDistance * 2), Quaternion.Euler(new Vector3(0, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z)));
@@ -105,6 +112,7 @@ public class WeaponController : MonoBehaviour {
                 break;
             case Weapon.C4:
                 currentWeapon = Instantiate(c4Prefab, Vector3.MoveTowards(transform.position, lookTarget - new Vector3(0, 20, 0), spawnDistance), transform.rotation);
+                cameraLocked = false;
                 break;
         }
 
