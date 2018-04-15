@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114777189602436690}
-  - {fileID: 114664308052448960}
+  - {fileID: 114468168115312928}
   EditorEvents:
   - {fileID: 114040653846831512}
   - {fileID: 114734386139242828}
@@ -25,9 +25,9 @@ MonoBehaviour:
   - {fileID: 114272762637739668}
   - {fileID: 114001619392561738}
   - {fileID: 114348067615522348}
-  MasterBankRef: {fileID: 114664308052448960}
+  MasterBankRef: {fileID: 114468168115312928}
   StringsBankRef: {fileID: 114777189602436690}
-  stringsBankWriteTime: 636593917220851732
+  stringsBankWriteTime: 636593918726132849
   cacheVersion: 2
 --- !u!114 &114001619392561738
 MonoBehaviour:
@@ -43,7 +43,7 @@ MonoBehaviour:
   Path: event:/Point
   guid: d1751c317b25b94a9a1f82b32c6d0d35
   Banks:
-  - {fileID: 114664308052448960}
+  - {fileID: 114468168115312928}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -80,12 +80,12 @@ MonoBehaviour:
   Path: event:/Missile
   guid: 0b65c9d8e4e4fc458e1a49ffafe54ea1
   Banks:
-  - {fileID: 114664308052448960}
+  - {fileID: 114468168115312928}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114736719667833698}
+  - {fileID: 114288933459117156}
   MinDistance: 0
   MaxDistance: 0
   Length: 26969
@@ -103,7 +103,7 @@ MonoBehaviour:
   Path: event:/Anvil
   guid: 6dff609d91bd5d4ba1589a7079522904
   Banks:
-  - {fileID: 114664308052448960}
+  - {fileID: 114468168115312928}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -125,7 +125,7 @@ MonoBehaviour:
   Path: event:/Explosion
   guid: 796c9c6da602a94ea5ff48437455a2e4
   Banks:
-  - {fileID: 114664308052448960}
+  - {fileID: 114468168115312928}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -147,7 +147,7 @@ MonoBehaviour:
   Path: event:/Music
   guid: 9c256345cdb21c43860c10a761a0b98f
   Banks:
-  - {fileID: 114664308052448960}
+  - {fileID: 114468168115312928}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -155,6 +155,36 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 27428
+--- !u!114 &114288933459117156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Missile
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114296696924180004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Baseball
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114348067615522348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +199,7 @@ MonoBehaviour:
   Path: snapshot:/Weapons
   guid: e3953dbe885c4e43a85ed8dd456f6956
   Banks:
-  - {fileID: 114664308052448960}
+  - {fileID: 114468168115312928}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -177,6 +207,40 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &114468168115312928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Repos\nordic3\Nordic-Game-Jam-2018\Chain Reaction\FMOD\NGJ2018\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636593924221284108
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 844544
+  Exists: 1
+--- !u!114 &114518527210299042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Truck_Crash
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114527505901993416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,13 +255,13 @@ MonoBehaviour:
   Path: event:/Truck
   guid: 292b53b9762d9f4994b05a64ef0ddbd0
   Banks:
-  - {fileID: 114664308052448960}
+  - {fileID: 114468168115312928}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 114018423333498508}
-  - {fileID: 114751802284372146}
+  - {fileID: 114849356162470610}
+  - {fileID: 114518527210299042}
   MinDistance: 1
   MaxDistance: 100
   Length: 12857
@@ -249,12 +313,12 @@ MonoBehaviour:
   Path: event:/Baseball
   guid: 10a6821e5b9bdf4b863ceca234b118e8
   Banks:
-  - {fileID: 114664308052448960}
+  - {fileID: 114468168115312928}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114552875740958560}
+  - {fileID: 114296696924180004}
   MinDistance: 0
   MaxDistance: 0
   Length: 8500
@@ -300,12 +364,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD/NGJ2018\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636593917220851732
+  lastModified: 636593918726132849
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 1204
   Exists: 1
+--- !u!114 &114849356162470610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Truck_drive
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114878543294849450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,7 +399,7 @@ MonoBehaviour:
   Path: event:/Button
   guid: 8ff37df0a0b4b946ac5eb8db471e9103
   Banks:
-  - {fileID: 114664308052448960}
+  - {fileID: 114468168115312928}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -342,7 +421,7 @@ MonoBehaviour:
   Path: event:/Bomb_bip
   guid: 34eb319ecea80641a26ce73ea5cd4178
   Banks:
-  - {fileID: 114664308052448960}
+  - {fileID: 114468168115312928}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
