@@ -20,6 +20,7 @@ public class WeaponController : MonoBehaviour {
     private Weapon currentWeaponType;
 
     public bool cameraLocked;
+    public bool firingWeapon = false;
 
     private void Awake()
     {
@@ -52,14 +53,17 @@ public class WeaponController : MonoBehaviour {
             ChangeCurrentWeapon(Weapon.C4);
         }
 
-        switch(currentWeaponType)
+        if (currentWeapon != null && !firingWeapon)
         {
-            case Weapon.Baseball:
-            case Weapon.C4:
-            case Weapon.Missile:
-                currentWeapon.transform.position = Vector3.MoveTowards(transform.position, lookTarget - new Vector3(0, 20, 0), spawnDistance);
-                currentWeapon.transform.rotation = transform.rotation;
-                break;
+            switch (currentWeaponType)
+            {
+                case Weapon.Baseball:
+                case Weapon.C4:
+                case Weapon.Missile:
+                    currentWeapon.transform.position = Vector3.MoveTowards(transform.position, lookTarget - new Vector3(0, 20, 0), spawnDistance);
+                    currentWeapon.transform.rotation = transform.rotation;
+                    break;
+            }
         }
     }
 
@@ -105,5 +109,6 @@ public class WeaponController : MonoBehaviour {
         }
 
         currentWeaponType = weaponType;
+        firingWeapon = false;
     }
 }

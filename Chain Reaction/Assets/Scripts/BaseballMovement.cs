@@ -44,14 +44,15 @@ public class BaseballMovement : MonoBehaviour
                 ballRigid.AddForce(target.normalized* fireSpeed + Vector3.up * fireSpeed/10, ForceMode.Impulse);
                 ballRigid.AddTorque(transform.up * 1000 - transform.right * 1000);
 
-                //ballShot = true;
+                WeaponController.instance.firingWeapon = true;
+                ballShot = true;
+                audioParam.setValue(1f);
             }
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        audioParam.setValue(1f);
         Destroy(this.gameObject, 2);
     }
 
