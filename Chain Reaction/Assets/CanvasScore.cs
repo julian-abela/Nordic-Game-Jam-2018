@@ -18,6 +18,8 @@ public class CanvasScore : MonoBehaviour {
     public Image turnPanelImage;
     public int playerTurn;
     float turnAlpha;
+    public Text wonText;
+    public Image wonImage;
 
     private bool playAudio;
     public float audioCooldown;
@@ -102,10 +104,21 @@ public class CanvasScore : MonoBehaviour {
     public void SetScore(PlayerScore.PlayerNr playerNr, int score)
     {
         buildings[playerNr].score = score;
-        string percentage = buildings[playerNr].MaxScore > 0 ? (100 - ((float)score / buildings[playerNr].MaxScore) * 100f).ToString("0.0") : "100";
+        float multiplier = 2f;
+        int visualizedScore = Mathf.RoundToInt(score * multiplier);
+        if (buildings[playerNr].score > ((float)buildings[playerNr].MaxScore/ multiplier))
+            PlayerWon(playerNr);
+        string percentage = buildings[playerNr].MaxScore > 0 ? Mathf.Max(100 - ((float)visualizedScore / buildings[playerNr].MaxScore) * 100f, 0).ToString("0.0") : "100";
         playerTextScores[(int)playerNr].text = playerNr + " = " + percentage + "%";
     }
-    
+
+    private void PlayerWon(PlayerScore.PlayerNr playerNr)
+    {
+        wonImage.gameObject.SetActive(true);
+        PlayerScore.PlayerNr otherPlayer = playerNr == PlayerScore.PlayerNr.P1 ? PlayerScore.PlayerNr.P2 : PlayerScore.PlayerNr.P1;
+        wonText.text = "PLAYER " + ((int)otherPlayer + 1) + " WON!";
+    }
+
     public void NextTurn()
     {
         playerTurn = (playerTurn + 1) % Enum.GetValues(typeof(PlayerScore.PlayerNr)).Length;
