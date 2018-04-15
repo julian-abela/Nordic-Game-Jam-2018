@@ -12,8 +12,13 @@ public class MusicScript : MonoBehaviour {
 
     EventInstance eventMusic;
 
-	// Use this for initialization
-	void Start () {
+    private void OnDestroy()
+    {
+        eventMusic.stop(STOP_MODE.IMMEDIATE);
+    }
+
+    // Use this for initialization
+    void Start () {
         eventMusic = RuntimeManager.CreateInstance(audioMusic);
         eventMusic.start();
 	}
