@@ -32322,12 +32322,12 @@ MonoBehaviour:
   spawnDistance: 10
   baseballPrefab: {fileID: 1065515150919750, guid: bf8491fc2968cc54198177ccaa0bb0bd,
     type: 2}
-  missilePrefab: {fileID: 1381571603277592, guid: 0c170c014e8b85e4287454c51033fd33,
-    type: 2}
+  missilePrefab: {fileID: 0}
   bowlingBallPrefab: {fileID: 1426432316725420, guid: 0e2c9e980b7b42a478dc06911cf45a3a,
     type: 2}
   carPrefab: {fileID: 1326647121258910, guid: 994d3874e07d2421da8c662cc0b979eb, type: 2}
   c4Prefab: {fileID: 0}
+  cameraLocked: 0
 --- !u!114 &2103837888
 MonoBehaviour:
   m_ObjectHideFlags: 0
