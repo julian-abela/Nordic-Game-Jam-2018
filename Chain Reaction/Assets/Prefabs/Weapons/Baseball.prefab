@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1520693589499316}
   m_LocalRotation: {x: 0.49999997, y: 0.5000001, z: -0.5, w: -0.49999988}
-  m_LocalPosition: {x: -6.5351887, y: 2.6253288, z: -15.41333}
+  m_LocalPosition: {x: -8.7258415, y: 0.99999976, z: -23.855694}
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6aca8866b61f254a8a07469abf718d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireSpeed: 1500
+  fireSpeed: 1750
   audioStart: event:/Baseball
 --- !u!135 &135718255045989256
 SphereCollider:
