@@ -41,6 +41,7 @@ public class MissileMovement : MonoBehaviour
     {
         if ((Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.Space)) && !missileShot)
         {
+            CanvasScore.instance.NextTurn();
             eventStart.start();
             GetComponent<Rigidbody>().AddForce(transform.forward * fireSpeed, ForceMode.Force);
             transform.parent = null;
