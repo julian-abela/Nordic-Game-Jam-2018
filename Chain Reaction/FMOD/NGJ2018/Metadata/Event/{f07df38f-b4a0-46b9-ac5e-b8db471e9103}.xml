@@ -5,7 +5,7 @@
             <value>Button</value>
         </property>
         <property name="outputFormat">
-            <value>2</value>
+            <value>1</value>
         </property>
         <relationship name="folder">
             <destination>{76f7796e-7e28-456b-b829-2181004c7534}</destination>
@@ -92,6 +92,10 @@
         <property name="length">
             <value>0.14933333333333335</value>
         </property>
+        <relationship name="modulators">
+            <destination>{74573004-4d02-4644-aa04-818146f0ba9d}</destination>
+            <destination>{fc83a5ee-cfb9-482d-ad2b-693227e9e087}</destination>
+        </relationship>
         <relationship name="audioFile">
             <destination>{30cf8f27-c89f-498d-82ff-fb8f68d90beb}</destination>
         </relationship>
@@ -113,11 +117,26 @@
     <object class="MixerBusEffectChain" id="{6742b43e-a3fc-4714-b2ac-86c596e98939}">
         <relationship name="effects">
             <destination>{332b9342-f8ea-409e-87f5-6f9426ca7b31}</destination>
-            <destination>{3aa7b752-41e1-496e-85b8-158c8f115ac1}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{79c18e71-d8e6-421a-8977-5f6733b12795}"/>
     <object class="MixerBusFader" id="{89267cd1-926f-47b4-8a64-6db2ead98407}"/>
+    <object class="RandomizerModulator" id="{74573004-4d02-4644-aa04-818146f0ba9d}">
+        <property name="nameOfPropertyBeingModulated">
+            <value>pitch</value>
+        </property>
+        <property name="amount">
+            <value>9.5</value>
+        </property>
+    </object>
+    <object class="RandomizerModulator" id="{fc83a5ee-cfb9-482d-ad2b-693227e9e087}">
+        <property name="nameOfPropertyBeingModulated">
+            <value>volume</value>
+        </property>
+        <property name="amount">
+            <value>5.19999981</value>
+        </property>
+    </object>
     <object class="MixerBusEffectChain" id="{37378744-178e-4a1b-b41d-919536686275}">
         <relationship name="effects">
             <destination>{5cbaa83d-64bb-40c5-b9e3-8d5f5891b2a1}</destination>
@@ -125,6 +144,5 @@
     </object>
     <object class="MixerBusPanner" id="{722cd334-71e2-464d-8acf-e8bc18a82ecc}"/>
     <object class="MixerBusFader" id="{332b9342-f8ea-409e-87f5-6f9426ca7b31}"/>
-    <object class="SpatialiserEffect" id="{3aa7b752-41e1-496e-85b8-158c8f115ac1}"/>
     <object class="MixerBusFader" id="{5cbaa83d-64bb-40c5-b9e3-8d5f5891b2a1}"/>
 </objects>

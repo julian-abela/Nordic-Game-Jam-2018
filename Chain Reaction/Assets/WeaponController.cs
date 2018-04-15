@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMOD.Studio;
+using FMODUnity;
 
 public class WeaponController : MonoBehaviour {
     public static WeaponController instance;
@@ -22,6 +24,12 @@ public class WeaponController : MonoBehaviour {
     public bool cameraLocked;
     public bool firingWeapon = false;
 
+    //audio
+    [EventRef]
+    public string audiobutton;
+
+    EventInstance eventButton;
+
     private void Awake()
     {
         instance = this;
@@ -30,6 +38,8 @@ public class WeaponController : MonoBehaviour {
     private void Start()
     {
         CanvasScore.instance.Initialize();
+
+        eventButton = RuntimeManager.CreateInstance(audiobutton);
     }
 
     void Update()
@@ -86,6 +96,8 @@ public class WeaponController : MonoBehaviour {
 
     void ChangeCurrentWeapon(Weapon weaponType)
     {
+        eventButton.start();
+
         if (currentWeapon != null)
         {
             Destroy(currentWeapon);
