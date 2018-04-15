@@ -48,6 +48,7 @@ public class AnvilScript : MonoBehaviour {
         }
         if ((Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.Space)))
         {
+            Destroy(transform.GetChild(1).gameObject);
             body.useGravity = true;
             body.AddForce(Vector3.down * fireSpeed, ForceMode.Force);
             hasBeenUsed = true;
